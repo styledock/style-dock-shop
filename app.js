@@ -1353,7 +1353,7 @@ document.addEventListener(
 
   }
 );
-alert("STYLE DOCK JS LOADED");
+
 renderProducts();
 
 renderCart();
