@@ -612,8 +612,7 @@ function openProduct(productId) {
 
         <button
           type="button"
-          id="modalAddToCart
-           "
+          id="modalAddToCart"
           class="btn btn-gold"
           style="width:100%;margin-top:15px"
           ${product.stock <= 0 ? "disabled" : ""}
