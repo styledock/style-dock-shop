@@ -1462,3 +1462,262 @@ window.openProduct = openProduct;
 window.removeFromCart = removeFromCart;
 window.changeQuantity = changeQuantity;
 window.closeProductModal = closeProductModal;
+/* =========================================================
+   STYLE DOCK — CHECKOUT SYSTEM
+   ========================================================= */
+
+const checkoutBox = document.getElementById("checkoutBox");
+const checkoutForm = document.getElementById("checkoutForm");
+const closeCheckout = document.getElementById("closeCheckout");
+const checkoutTotal = document.getElementById("checkoutTotal");
+
+const customerName = document.getElementById("customerName");
+const customerPhone = document.getElementById("customerPhone");
+const deliveryOption = document.getElementById("deliveryOption");
+const customerAddress = document.getElementById("customerAddress");
+const customerPincode = document.getElementById("customerPincode");
+const orderNote = document.getElementById("orderNote");
+
+const addressField = document.getElementById("addressField");
+const pincodeField = document.getElementById("pincodeField");
+
+
+/* OPEN CHECKOUT */
+
+function openCheckout() {
+
+  if (!cart.length) {
+    showToast("Your cart is empty.");
+    return;
+  }
+
+  if (!checkoutBox) return;
+
+  checkoutTotal.textContent = formatPrice(cartTotalValue());
+
+  checkoutBox.hidden = false;
+
+  checkoutBox.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+}
+
+
+/* CLOSE CHECKOUT */
+
+function hideCheckout() {
+
+  if (!checkoutBox) return;
+
+  checkoutBox.hidden = true;
+
+}
+
+
+/* DELIVERY OPTION */
+
+if (deliveryOption) {
+
+  deliveryOption.addEventListener("change", () => {
+
+    const pickup = deliveryOption.value === "Store Pickup";
+
+    if (pickup) {
+
+      addressField.style.display = "none";
+      pincodeField.style.display = "none";
+
+      customerAddress.required = false;
+      customerPincode.required = false;
+
+    } else {
+
+      addressField.style.display = "";
+      pincodeField.style.display = "";
+
+      customerAddress.required = true;
+      customerPincode.required = true;
+
+    }
+
+  });
+
+}
+
+
+/* CHECKOUT BUTTON */
+
+const checkoutButton = document.getElementById("whatsappOrder");
+
+if (checkoutButton) {
+
+  checkoutButton.addEventListener("click", () => {
+
+    openCheckout();
+
+  });
+
+}
+
+
+/* CLOSE CHECKOUT */
+
+if (closeCheckout) {
+
+  closeCheckout.addEventListener("click", () => {
+
+    hideCheckout();
+
+  });
+
+}
+
+
+/* SUBMIT CHECKOUT */
+
+if (checkoutForm) {
+
+  checkoutForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    if (!cart.length) {
+      showToast("Your cart is empty.");
+      return;
+    }
+
+    const name = customerName.value.trim();
+    const phone = customerPhone.value.trim();
+    const delivery = deliveryOption.value;
+    const address = customerAddress.value.trim();
+    const pincode = customerPincode.value.trim();
+    const note = orderNote.value.trim();
+
+
+    /* PHONE VALIDATION */
+
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+
+      showToast("Please enter a valid 10-digit mobile number.");
+
+      customerPhone.focus();
+
+      return;
+
+    }
+
+
+    /* DELIVERY VALIDATION */
+
+    if (!delivery) {
+
+      showToast("Please select delivery option.");
+
+      deliveryOption.focus();
+
+      return;
+
+    }
+
+
+    /* ADDRESS VALIDATION */
+
+    if (delivery === "Home Delivery") {
+
+      if (address.length < 5) {
+
+        showToast("Please enter your full address.");
+
+        customerAddress.focus();
+
+        return;
+
+      }
+
+      if (!/^\d{6}$/.test(pincode)) {
+
+        showToast("Please enter a valid 6-digit pincode.");
+
+        customerPincode.focus();
+
+        return;
+
+      }
+
+    }
+
+
+    /* CREATE WHATSAPP MESSAGE */
+
+    let message =
+      "🛍️ *NEW STYLE DOCK ORDER*\n\n" +
+
+      "*CUSTOMER DETAILS*\n" +
+      `Name: ${name}\n` +
+      `Mobile: ${phone}\n` +
+      `Order type: ${delivery}\n`;
+
+
+    if (delivery === "Home Delivery") {
+
+      message +=
+        `Address: ${address}\n` +
+        `Pincode: ${pincode}\n`;
+
+    }
+
+
+    message +=
+      "\n*ORDER ITEMS*\n\n";
+
+
+    cart.forEach((item, index) => {
+
+      message +=
+        `${index + 1}. ${item.name}\n` +
+        `Size: ${item.size || "N/A"}\n` +
+        `Color: ${item.color || "N/A"}\n` +
+        `Qty: ${item.quantity}\n` +
+        `Price: ${formatPrice(item.price)}\n\n`;
+
+    });
+
+
+    message +=
+      `*TOTAL: ${formatPrice(cartTotalValue())}*\n`;
+
+
+    if (note) {
+
+      message +=
+        `\n*CUSTOMER NOTE*\n${note}\n`;
+
+    }
+
+
+    message +=
+      "\nPlease confirm product availability and final order details.\n" +
+      "Thank you! ❤️\n" +
+      "STYLE DOCK";
+
+
+    const whatsappURL =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+      encodeURIComponent(message);
+
+
+    window.open(whatsappURL, "_blank");
+
+
+    showToast("Opening WhatsApp…");
+
+  });
+
+}
+
+
+/* GLOBAL */
+
+window.openCheckout = openCheckout;
