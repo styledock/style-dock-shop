@@ -943,3 +943,49 @@ footer{
   outline:3px solid rgba(199,164,90,.55);
   outline-offset:3px;
 }
+/* ===== STYLE DOCK FINAL VISUAL POLISH ===== */
+
+.site-header{
+  background:#fffdf9 !important;
+  min-height:72px !important;
+  padding:8px 18px !important;
+  box-shadow:0 2px 14px rgba(0,0,0,.06) !important;
+}
+
+.brand{
+  width:150px !important;
+  height:54px !important;
+  overflow:hidden !important;
+  display:flex !important;
+  align-items:center !important;
+}
+
+.brand img{
+  width:150px !important;
+  height:54px !important;
+  max-width:none !important;
+  object-fit:contain !important;
+}
+
+.header-actions{
+  gap:7px !important;
+}
+
+.text-btn{
+  color:#15231f !important;
+  background:#fff !important;
+  border:0 !important;
+  font-size:16px !important;
+}
+
+.icon-btn{
+  color:#15231f !important;
+  background:#fff !important;
+  border:0 !important;
+  font-size:20px !important;
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 85% 18%,rgba(199,164,90,.28),transparent 25%),
+    radial-gradient(circle at 15% 85%,rgba(
