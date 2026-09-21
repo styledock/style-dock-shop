@@ -1,10 +1,4 @@
-/* =========================================================
-   STYLE DOCK — COMPLETE STORE FRONT JAVASCRIPT
-   ========================================================= */
-
-const WHATSAPP_NUMBER = "8881717710";
-
-/* ================= PRODUCTS ================= */
+const WHATSAPP_NUMBER = "918881717710";
 
 const PRODUCTS = [
   {
@@ -15,17 +9,13 @@ const PRODUCTS = [
     price: 450,
     oldPrice: 549,
     image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["28", "30", "32", "34", "36"],
+    sizes: ["28","30","32","34","36"],
     colors: ["Blue"],
     stock: 10,
-    description: "Relaxed baggy-fit jeans designed for an easy everyday streetwear look.",
+    description: "Relaxed baggy-fit jeans for an easy everyday streetwear look.",
     featured: true,
     new: true
   },
-
   {
     id: 2,
     name: "Premium Oversized Tee",
@@ -34,17 +24,13 @@ const PRODUCTS = [
     price: 399,
     oldPrice: 499,
     image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["M", "L", "XL", "XXL"],
+    sizes: ["M","L","XL","XXL"],
     colors: ["White"],
     stock: 12,
     description: "Clean oversized silhouette with a comfortable everyday fit.",
     featured: true,
     new: true
   },
-
   {
     id: 3,
     name: "Everyday Women's Kurti",
@@ -53,17 +39,13 @@ const PRODUCTS = [
     price: 599,
     oldPrice: 749,
     image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["S", "M", "L", "XL", "XXL"],
+    sizes: ["S","M","L","XL","XXL"],
     colors: ["Maroon"],
     stock: 8,
-    description: "Easy everyday kurti with a comfortable silhouette for casual styling.",
+    description: "Easy everyday kurti with a comfortable silhouette.",
     featured: true,
     new: false
   },
-
   {
     id: 4,
     name: "Relaxed Cargo Pants",
@@ -72,17 +54,13 @@ const PRODUCTS = [
     price: 699,
     oldPrice: 899,
     image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["28", "30", "32", "34", "36"],
+    sizes: ["28","30","32","34","36"],
     colors: ["Olive"],
     stock: 7,
-    description: "Relaxed cargo styling with practical pockets and an easy fit.",
+    description: "Relaxed cargo styling with practical pockets.",
     featured: true,
     new: true
   },
-
   {
     id: 5,
     name: "Classic Casual Shirt",
@@ -91,17 +69,13 @@ const PRODUCTS = [
     price: 649,
     oldPrice: 799,
     image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["M", "L", "XL", "XXL"],
+    sizes: ["M","L","XL","XXL"],
     colors: ["Black"],
     stock: 9,
-    description: "Versatile casual shirt made for everyday outfits and easy layering.",
+    description: "Versatile casual shirt for everyday outfits.",
     featured: false,
     new: true
   },
-
   {
     id: 6,
     name: "Women's Everyday Dress",
@@ -110,17 +84,13 @@ const PRODUCTS = [
     price: 799,
     oldPrice: 999,
     image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S","M","L","XL"],
     colors: ["Black"],
     stock: 6,
-    description: "Simple modern dress designed for an effortless everyday look.",
+    description: "Simple modern dress for an effortless everyday look.",
     featured: true,
     new: true
   },
-
   {
     id: 7,
     name: "Kids Casual Outfit",
@@ -129,17 +99,13 @@ const PRODUCTS = [
     price: 499,
     oldPrice: 649,
     image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=85"
-    ],
-    sizes: ["2-3Y", "4-5Y", "6-7Y", "8-9Y"],
+    sizes: ["2-3Y","4-5Y","6-7Y","8-9Y"],
     colors: ["Blue"],
     stock: 5,
     description: "Comfortable casual kidswear for everyday adventures.",
     featured: false,
     new: true
   },
-
   {
     id: 8,
     name: "Minimal Everyday Watch",
@@ -148,9 +114,6 @@ const PRODUCTS = [
     price: 899,
     oldPrice: 1199,
     image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
-    images: [
-      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85"
-    ],
     sizes: ["FREE"],
     colors: ["Black"],
     stock: 4,
@@ -160,9 +123,6 @@ const PRODUCTS = [
   }
 ];
 
-
-/* ================= STATE ================= */
-
 let cart = JSON.parse(localStorage.getItem("styleDockCart") || "[]");
 
 let currentCategory = "All";
@@ -170,9 +130,6 @@ let currentSearch = "";
 let currentProduct = null;
 let selectedSize = null;
 let selectedColor = null;
-
-
-/* ================= ELEMENTS ================= */
 
 const productGrid = document.getElementById("productGrid");
 const resultCount = document.getElementById("resultCount");
@@ -203,21 +160,21 @@ const offersBtn = document.getElementById("offersBtn");
 const clearFilters = document.getElementById("clearFilters");
 
 
-/* ================= HELPERS ================= */
-
 function formatPrice(price) {
   return "₹" + Number(price).toLocaleString("en-IN");
 }
 
+
 function discountPercent(price, oldPrice) {
   if (!oldPrice || oldPrice <= price) return 0;
-
   return Math.round(((oldPrice - price) / oldPrice) * 100);
 }
+
 
 function saveCart() {
   localStorage.setItem("styleDockCart", JSON.stringify(cart));
 }
+
 
 function showToast(message) {
   if (!toast) return;
@@ -233,7 +190,15 @@ function showToast(message) {
 }
 
 
-/* ================= FILTERING ================= */
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 
 function getFilteredProducts() {
 
@@ -241,14 +206,10 @@ function getFilteredProducts() {
 
   if (currentCategory !== "All") {
 
-    list = list.filter(product => {
-
-      return (
-        product.category === currentCategory ||
-        product.gender === currentCategory
-      );
-
-    });
+    list = list.filter(product =>
+      product.category === currentCategory ||
+      product.gender === currentCategory
+    );
 
   }
 
@@ -256,16 +217,12 @@ function getFilteredProducts() {
 
     const query = currentSearch.toLowerCase();
 
-    list = list.filter(product => {
-
-      return (
-        product.name.toLowerCase().includes(query) ||
-        product.category.toLowerCase().includes(query) ||
-        product.gender.toLowerCase().includes(query) ||
-        product.colors.join(" ").toLowerCase().includes(query)
-      );
-
-    });
+    list = list.filter(product =>
+      product.name.toLowerCase().includes(query) ||
+      product.category.toLowerCase().includes(query) ||
+      product.gender.toLowerCase().includes(query) ||
+      product.colors.join(" ").toLowerCase().includes(query)
+    );
 
   }
 
@@ -273,25 +230,23 @@ function getFilteredProducts() {
 }
 
 
-/* ================= SORTING ================= */
-
 function sortProducts(list) {
 
   const value = sortSelect ? sortSelect.value : "featured";
 
   if (value === "low") {
-    return list.sort((a, b) => a.price - b.price);
+    return list.sort((a,b) => a.price - b.price);
   }
 
   if (value === "high") {
-    return list.sort((a, b) => b.price - a.price);
+    return list.sort((a,b) => b.price - a.price);
   }
 
   if (value === "new") {
-    return list.sort((a, b) => Number(b.new) - Number(a.new));
+    return list.sort((a,b) => Number(b.new) - Number(a.new));
   }
 
-  return list.sort((a, b) => {
+  return list.sort((a,b) => {
 
     if (a.featured !== b.featured) {
       return Number(b.featured) - Number(a.featured);
@@ -303,11 +258,12 @@ function sortProducts(list) {
 }
 
 
-/* ================= PRODUCT CARD ================= */
-
 function productCard(product) {
 
-  const discount = discountPercent(product.price, product.oldPrice);
+  const discount = discountPercent(
+    product.price,
+    product.oldPrice
+  );
 
   const stockText =
     product.stock <= 0
@@ -317,6 +273,7 @@ function productCard(product) {
         : "In stock";
 
   return `
+
     <article class="product-card">
 
       <div style="position:relative">
@@ -330,34 +287,34 @@ function productCard(product) {
 
         ${
           product.new
-            ? `<span style="
-                position:absolute;
-                top:12px;
-                left:12px;
-                background:#10251f;
-                color:white;
-                padding:6px 9px;
-                border-radius:999px;
-                font-size:10px;
-                font-weight:800;
-              ">NEW</span>`
-            : ""
+          ? `<span style="
+              position:absolute;
+              top:12px;
+              left:12px;
+              background:#10251f;
+              color:#fff;
+              padding:6px 9px;
+              border-radius:999px;
+              font-size:10px;
+              font-weight:800;
+            ">NEW</span>`
+          : ""
         }
 
         ${
           discount
-            ? `<span style="
-                position:absolute;
-                top:12px;
-                right:12px;
-                background:#c7a45a;
-                color:#15140f;
-                padding:6px 9px;
-                border-radius:999px;
-                font-size:10px;
-                font-weight:800;
-              ">${discount}% OFF</span>`
-            : ""
+          ? `<span style="
+              position:absolute;
+              top:12px;
+              right:12px;
+              background:#c7a45a;
+              color:#15140f;
+              padding:6px 9px;
+              border-radius:999px;
+              font-size:10px;
+              font-weight:800;
+            ">${discount}% OFF</span>`
+          : ""
         }
 
       </div>
@@ -365,23 +322,29 @@ function productCard(product) {
       <div class="product-info">
 
         <p style="margin-bottom:5px">
-          ${escapeHtml(product.gender)} · ${escapeHtml(product.category)}
+          ${escapeHtml(product.gender)}
+          ·
+          ${escapeHtml(product.category)}
         </p>
 
         <h3>${escapeHtml(product.name)}</h3>
 
         <div class="product-price">
+
           ${formatPrice(product.price)}
+
           ${
             product.oldPrice
-              ? `<del style="
-                    color:#999;
-                    font-size:12px;
-                    font-weight:500;
-                    margin-left:5px;
-                  ">${formatPrice(product.oldPrice)}</del>`
-              : ""
+            ? `<del style="
+                color:#999;
+                font-size:12px;
+                margin-left:5px;
+              ">
+                ${formatPrice(product.oldPrice)}
+              </del>`
+            : ""
           }
+
         </div>
 
         <p style="
@@ -393,9 +356,10 @@ function productCard(product) {
         </p>
 
         <button
+          type="button"
           class="btn btn-dark"
           style="width:100%;margin-top:10px"
-          onclick="openProduct(${product.id})"
+          data-product-id="${product.id}"
         >
           View details
         </button>
@@ -407,8 +371,6 @@ function productCard(product) {
 }
 
 
-/* ================= RENDER PRODUCTS ================= */
-
 function renderProducts() {
 
   if (!productGrid) return;
@@ -418,8 +380,12 @@ function renderProducts() {
   list = sortProducts(list);
 
   if (resultCount) {
+
     resultCount.textContent =
-      `${list.length} ${list.length === 1 ? "style" : "styles"}`;
+      `${list.length} ${
+        list.length === 1 ? "style" : "styles"
+      }`;
+
   }
 
   if (!list.length) {
@@ -437,24 +403,31 @@ function renderProducts() {
     emptyState.hidden = true;
   }
 
-  productGrid.innerHTML = list.map(productCard).join("");
+  productGrid.innerHTML =
+    list.map(productCard).join("");
+
 }
 
 
-/* ================= PRODUCT MODAL ================= */
-
 function openProduct(productId) {
 
-  const product = PRODUCTS.find(p => p.id === productId);
+  const product = PRODUCTS.find(
+    p => p.id === Number(productId)
+  );
 
-  if (!product) return;
+  if (!product || !modalContent || !productModal) {
+    return;
+  }
 
   currentProduct = product;
 
   selectedSize = product.sizes?.[0] || null;
   selectedColor = product.colors?.[0] || null;
 
-  const discount = discountPercent(product.price, product.oldPrice);
+  const discount = discountPercent(
+    product.price,
+    product.oldPrice
+  );
 
   modalContent.innerHTML = `
 
@@ -484,7 +457,9 @@ function openProduct(productId) {
       <div>
 
         <p class="eyebrow" style="color:#c7a45a">
-          ${escapeHtml(product.gender)} · ${escapeHtml(product.category)}
+          ${escapeHtml(product.gender)}
+          ·
+          ${escapeHtml(product.category)}
         </p>
 
         <h2 style="
@@ -512,25 +487,25 @@ function openProduct(productId) {
 
           ${
             product.oldPrice
-              ? `<del style="color:#999">
-                  ${formatPrice(product.oldPrice)}
-                </del>`
-              : ""
+            ? `<del style="color:#999">
+                ${formatPrice(product.oldPrice)}
+              </del>`
+            : ""
           }
 
           ${
             discount
-              ? `<span style="
-                  padding:5px 8px;
-                  border-radius:999px;
-                  background:#eee4ca;
-                  color:#705a2e;
-                  font-size:11px;
-                  font-weight:800;
-                ">
-                  ${discount}% OFF
-                </span>`
-              : ""
+            ? `<span style="
+                padding:5px 8px;
+                border-radius:999px;
+                background:#eee4ca;
+                color:#705a2e;
+                font-size:11px;
+                font-weight:800;
+              ">
+                ${discount}% OFF
+              </span>`
+            : ""
           }
 
         </div>
@@ -545,7 +520,10 @@ function openProduct(productId) {
 
         <div style="margin-top:22px">
 
-          <strong style="display:block;margin-bottom:9px">
+          <strong style="
+            display:block;
+            margin-bottom:9px;
+          ">
             Select size
           </strong>
 
@@ -558,26 +536,26 @@ function openProduct(productId) {
             "
           >
 
-            ${
-              product.sizes.map(size => `
-                <button
-                  type="button"
-                  class="size-option"
-                  data-size="${escapeHtml(size)}"
-                  style="
-                    min-width:48px;
-                    min-height:40px;
-                    padding:0 12px;
-                    border:1px solid #ddd7cb;
-                    border-radius:10px;
-                    background:white;
-                    font-weight:700;
-                  "
-                >
-                  ${escapeHtml(size)}
-                </button>
-              `).join("")
-            }
+            ${product.sizes.map(size => `
+
+              <button
+                type="button"
+                class="size-option"
+                data-size="${escapeHtml(size)}"
+                style="
+                  min-width:48px;
+                  min-height:40px;
+                  padding:0 12px;
+                  border:1px solid #ddd7cb;
+                  border-radius:10px;
+                  background:white;
+                  font-weight:700;
+                "
+              >
+                ${escapeHtml(size)}
+              </button>
+
+            `).join("")}
 
           </div>
 
@@ -585,7 +563,10 @@ function openProduct(productId) {
 
         <div style="margin-top:20px">
 
-          <strong style="display:block;margin-bottom:9px">
+          <strong style="
+            display:block;
+            margin-bottom:9px;
+          ">
             Color
           </strong>
 
@@ -598,25 +579,25 @@ function openProduct(productId) {
             "
           >
 
-            ${
-              product.colors.map(color => `
-                <button
-                  type="button"
-                  class="color-option"
-                  data-color="${escapeHtml(color)}"
-                  style="
-                    min-height:40px;
-                    padding:0 14px;
-                    border:1px solid #ddd7cb;
-                    border-radius:10px;
-                    background:white;
-                    font-weight:700;
-                  "
-                >
-                  ${escapeHtml(color)}
-                </button>
-              `).join("")
-            }
+            ${product.colors.map(color => `
+
+              <button
+                type="button"
+                class="color-option"
+                data-color="${escapeHtml(color)}"
+                style="
+                  min-height:40px;
+                  padding:0 14px;
+                  border:1px solid #ddd7cb;
+                  border-radius:10px;
+                  background:white;
+                  font-weight:700;
+                "
+              >
+                ${escapeHtml(color)}
+              </button>
+
+            `).join("")}
 
           </div>
 
@@ -632,30 +613,30 @@ function openProduct(productId) {
         ">
           ${
             product.stock > 0
-              ? `✓ ${product.stock} pieces currently available`
-              : "Currently out of stock"
+            ? `✓ ${product.stock} pieces currently available`
+            : "Currently out of stock"
           }
         </div>
 
         <button
+          type="button"
           id="modalAddToCart"
           class="btn btn-gold"
-          style="
-            width:100%;
-            margin-top:15px;
-          "
+          style="width:100%;margin-top:15px"
           ${product.stock <= 0 ? "disabled" : ""}
         >
-          ${product.stock > 0 ? "Add to cart" : "Out of stock"}
+          ${
+            product.stock > 0
+            ? "Add to cart"
+            : "Out of stock"
+          }
         </button>
 
         <button
+          type="button"
           id="modalBuyNow"
           class="btn btn-dark"
-          style="
-            width:100%;
-            margin-top:9px;
-          "
+          style="width:100%;margin-top:9px"
           ${product.stock <= 0 ? "disabled" : ""}
         >
           Buy now
@@ -669,6 +650,7 @@ function openProduct(productId) {
   setupProductOptions();
 
   productModal.hidden = false;
+
   document.body.style.overflow = "hidden";
 }
 
@@ -691,13 +673,17 @@ function setupProductOptions() {
 
       selectedSize = button.dataset.size;
 
-      sizeButtons.forEach(btn =>
-        selectButtonStyle(btn, btn === button)
-      );
+      sizeButtons.forEach(btn => {
+        selectButtonStyle(
+          btn,
+          btn === button
+        );
+      });
 
     });
 
   });
+
 
   colorButtons.forEach(button => {
 
@@ -709,13 +695,17 @@ function setupProductOptions() {
 
       selectedColor = button.dataset.color;
 
-      colorButtons.forEach(btn =>
-        selectButtonStyle(btn, btn === button)
-      );
+      colorButtons.forEach(btn => {
+        selectButtonStyle(
+          btn,
+          btn === button
+        );
+      });
 
     });
 
   });
+
 
   const addButton =
     document.getElementById("modalAddToCart");
@@ -734,6 +724,7 @@ function setupProductOptions() {
 
   }
 
+
   const buyButton =
     document.getElementById("modalBuyNow");
 
@@ -748,11 +739,13 @@ function setupProductOptions() {
       );
 
       closeProductModal();
+
       openCart();
 
     });
 
   }
+
 }
 
 
@@ -775,12 +768,12 @@ function selectButtonStyle(button, active) {
 }
 
 
-/* ================= CART ================= */
-
 function addToCart(product, size, color) {
 
   if (!product || product.stock <= 0) {
+
     showToast("This product is out of stock.");
+
     return;
   }
 
@@ -794,9 +787,11 @@ function addToCart(product, size, color) {
 
     if (existing.quantity >= product.stock) {
 
-      showToast("Maximum available stock reached.");
-      return;
+      showToast(
+        "Maximum available stock reached."
+      );
 
+      return;
     }
 
     existing.quantity += 1;
@@ -804,6 +799,7 @@ function addToCart(product, size, color) {
   } else {
 
     cart.push({
+
       productId: product.id,
       name: product.name,
       price: product.price,
@@ -811,15 +807,19 @@ function addToCart(product, size, color) {
       size: size,
       color: color,
       quantity: 1
+
     });
 
   }
 
   saveCart();
+
   renderCart();
+
   updateCartCount();
 
   showToast("Added to your cart.");
+
 }
 
 
@@ -828,7 +828,9 @@ function removeFromCart(index) {
   cart.splice(index, 1);
 
   saveCart();
+
   renderCart();
+
   updateCartCount();
 
 }
@@ -841,7 +843,9 @@ function changeQuantity(index, change) {
   if (!item) return;
 
   const product =
-    PRODUCTS.find(product => product.id === item.productId);
+    PRODUCTS.find(
+      product => product.id === item.productId
+    );
 
   if (!product) return;
 
@@ -851,13 +855,17 @@ function changeQuantity(index, change) {
   if (newQuantity <= 0) {
 
     removeFromCart(index);
+
     return;
 
   }
 
   if (newQuantity > product.stock) {
 
-    showToast("Maximum available stock reached.");
+    showToast(
+      "Maximum available stock reached."
+    );
+
     return;
 
   }
@@ -865,7 +873,9 @@ function changeQuantity(index, change) {
   item.quantity = newQuantity;
 
   saveCart();
+
   renderCart();
+
   updateCartCount();
 
 }
@@ -893,6 +903,7 @@ function updateCartCount() {
   );
 
   cartCount.textContent = count;
+
 }
 
 
@@ -903,11 +914,13 @@ function renderCart() {
   if (!cart.length) {
 
     cartItems.innerHTML = `
+
       <div style="
         padding:45px 15px;
         text-align:center;
         color:#77766f;
       ">
+
         <div style="
           font-size:38px;
           margin-bottom:10px;
@@ -927,12 +940,14 @@ function renderCart() {
         <span style="font-size:13px">
           Add something you love.
         </span>
+
       </div>
     `;
 
   } else {
 
-    cartItems.innerHTML = cart.map((item, index) => `
+    cartItems.innerHTML = cart.map(
+      (item, index) => `
 
       <div style="
         display:grid;
@@ -950,7 +965,6 @@ function renderCart() {
             height:92px;
             object-fit:cover;
             border-radius:12px;
-            background:#f0ede6;
           "
           onerror="this.src='tsd-logo.png'"
         >
@@ -960,7 +974,6 @@ function renderCart() {
           <strong style="
             display:block;
             font-size:13px;
-            line-height:1.35;
           ">
             ${escapeHtml(item.name)}
           </strong>
@@ -971,7 +984,8 @@ function renderCart() {
             font-size:11px;
           ">
             Size: ${escapeHtml(item.size || "—")}
-            · Color: ${escapeHtml(item.color || "—")}
+            ·
+            Color: ${escapeHtml(item.color || "—")}
           </div>
 
           <div style="
@@ -995,15 +1009,14 @@ function renderCart() {
               style="
                 width:29px;
                 height:29px;
-                border:1px solid #ddd7cb;
-                border-radius:8px;
-                background:white;
               "
             >
               −
             </button>
 
-            <strong>${item.quantity}</strong>
+            <strong>
+              ${item.quantity}
+            </strong>
 
             <button
               type="button"
@@ -1011,9 +1024,6 @@ function renderCart() {
               style="
                 width:29px;
                 height:29px;
-                border:1px solid #ddd7cb;
-                border-radius:8px;
-                background:white;
               "
             >
               +
@@ -1027,20 +1037,19 @@ function renderCart() {
           type="button"
           onclick="removeFromCart(${index})"
           style="
-            align-self:start;
             border:0;
             background:none;
             color:#9a4035;
             font-size:20px;
           "
-          aria-label="Remove item"
         >
           ×
         </button>
 
       </div>
 
-    `).join("");
+    `
+    ).join("");
 
   }
 
@@ -1051,8 +1060,6 @@ function renderCart() {
 
 }
 
-
-/* ================= CART DRAWER ================= */
 
 function openCart() {
 
@@ -1068,6 +1075,7 @@ function openCart() {
   }
 
   document.body.style.overflow = "hidden";
+
 }
 
 
@@ -1085,10 +1093,9 @@ function closeCartDrawer() {
   }
 
   document.body.style.overflow = "";
+
 }
 
-
-/* ================= MODAL CLOSE ================= */
 
 function closeProductModal() {
 
@@ -1101,13 +1108,12 @@ function closeProductModal() {
 }
 
 
-/* ================= WHATSAPP ORDER ================= */
-
 function sendWhatsAppOrder() {
 
   if (!cart.length) {
 
     showToast("Your cart is empty.");
+
     return;
 
   }
@@ -1140,8 +1146,6 @@ function sendWhatsAppOrder() {
 }
 
 
-/* ================= SEARCH ================= */
-
 function performSearch() {
 
   currentSearch =
@@ -1154,14 +1158,12 @@ function performSearch() {
   document
     .getElementById("shop")
     ?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+      behavior:"smooth",
+      block:"start"
     });
 
 }
 
-
-/* ================= CATEGORY ================= */
 
 function setCategory(category) {
 
@@ -1183,40 +1185,17 @@ function setCategory(category) {
 }
 
 
-/* ================= ESCAPE HTML ================= */
-
-function escapeHtml(value) {
-
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-
-}
-
-
-/* ================= EVENTS ================= */
-
-/* Categories */
-
 document
   .querySelectorAll(".cat")
   .forEach(button => {
 
-    button.addEventListener("click", () => {
-
-      setCategory(
-        button.dataset.cat
-      );
-
-    });
+    button.addEventListener(
+      "click",
+      () => setCategory(button.dataset.cat)
+    );
 
   });
 
-
-/* Search */
 
 if (searchBtn) {
 
@@ -1256,8 +1235,6 @@ if (searchInput) {
 }
 
 
-/* Sort */
-
 if (sortSelect) {
 
   sortSelect.addEventListener(
@@ -1267,8 +1244,6 @@ if (sortSelect) {
 
 }
 
-
-/* Cart */
 
 if (cartBtn) {
 
@@ -1306,12 +1281,12 @@ if (clearCart) {
     "click",
     () => {
 
-      if (!cart.length) return;
-
       cart = [];
 
       saveCart();
+
       renderCart();
+
       updateCartCount();
 
       showToast("Cart cleared.");
@@ -1322,8 +1297,6 @@ if (clearCart) {
 }
 
 
-/* WhatsApp */
-
 if (whatsappOrder) {
 
   whatsappOrder.addEventListener(
@@ -1333,8 +1306,6 @@ if (whatsappOrder) {
 
 }
 
-
-/* Product modal */
 
 if (closeModal) {
 
@@ -1362,8 +1333,6 @@ if (productModal) {
 }
 
 
-/* Offers */
-
 if (offersBtn) {
 
   offersBtn.addEventListener(
@@ -1373,7 +1342,7 @@ if (offersBtn) {
       document
         .getElementById("offers")
         ?.scrollIntoView({
-          behavior: "smooth"
+          behavior:"smooth"
         });
 
     }
@@ -1381,8 +1350,6 @@ if (offersBtn) {
 
 }
 
-
-/* Clear filters */
 
 if (clearFilters) {
 
@@ -1420,7 +1387,33 @@ if (clearFilters) {
 }
 
 
-/* ESC key */
+/* IMPORTANT:
+   This uses event delegation, so
+   View Details always works.
+*/
+
+if (productGrid) {
+
+  productGrid.addEventListener(
+    "click",
+    event => {
+
+      const button =
+        event.target.closest(
+          "[data-product-id]"
+        );
+
+      if (!button) return;
+
+      openProduct(
+        Number(button.dataset.productId)
+      );
+
+    }
+  );
+
+}
+
 
 document.addEventListener(
   "keydown",
@@ -1437,7 +1430,9 @@ document.addEventListener(
 
     if (
       cartDrawer &&
-      cartDrawer.getAttribute("aria-hidden") === "false"
+      cartDrawer.getAttribute(
+        "aria-hidden"
+      ) === "false"
     ) {
       closeCartDrawer();
     }
@@ -1446,278 +1441,12 @@ document.addEventListener(
 );
 
 
-/* ================= INITIALIZE ================= */
-
 renderProducts();
 renderCart();
 updateCartCount();
 
 
-/* ================= GLOBAL FUNCTIONS =================
-   These are intentionally exposed because product cards
-   use inline onclick handlers.
-   ===================================================== */
-
 window.openProduct = openProduct;
 window.removeFromCart = removeFromCart;
 window.changeQuantity = changeQuantity;
 window.closeProductModal = closeProductModal;
-/* =========================================================
-   STYLE DOCK — CHECKOUT SYSTEM
-   ========================================================= */
-
-const checkoutBox = document.getElementById("checkoutBox");
-const checkoutForm = document.getElementById("checkoutForm");
-const closeCheckout = document.getElementById("closeCheckout");
-const checkoutTotal = document.getElementById("checkoutTotal");
-
-const customerName = document.getElementById("customerName");
-const customerPhone = document.getElementById("customerPhone");
-const deliveryOption = document.getElementById("deliveryOption");
-const customerAddress = document.getElementById("customerAddress");
-const customerPincode = document.getElementById("customerPincode");
-const orderNote = document.getElementById("orderNote");
-
-const addressField = document.getElementById("addressField");
-const pincodeField = document.getElementById("pincodeField");
-
-
-/* OPEN CHECKOUT */
-
-function openCheckout() {
-
-  if (!cart.length) {
-    showToast("Your cart is empty.");
-    return;
-  }
-
-  if (!checkoutBox) return;
-
-  checkoutTotal.textContent = formatPrice(cartTotalValue());
-
-  checkoutBox.hidden = false;
-
-  checkoutBox.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-
-}
-
-
-/* CLOSE CHECKOUT */
-
-function hideCheckout() {
-
-  if (!checkoutBox) return;
-
-  checkoutBox.hidden = true;
-
-}
-
-
-/* DELIVERY OPTION */
-
-if (deliveryOption) {
-
-  deliveryOption.addEventListener("change", () => {
-
-    const pickup = deliveryOption.value === "Store Pickup";
-
-    if (pickup) {
-
-      addressField.style.display = "none";
-      pincodeField.style.display = "none";
-
-      customerAddress.required = false;
-      customerPincode.required = false;
-
-    } else {
-
-      addressField.style.display = "";
-      pincodeField.style.display = "";
-
-      customerAddress.required = true;
-      customerPincode.required = true;
-
-    }
-
-  });
-
-}
-
-
-/* CHECKOUT BUTTON */
-
-const checkoutButton = document.getElementById("whatsappOrder");
-
-if (checkoutButton) {
-
-  checkoutButton.addEventListener("click", () => {
-
-    openCheckout();
-
-  });
-
-}
-
-
-/* CLOSE CHECKOUT */
-
-if (closeCheckout) {
-
-  closeCheckout.addEventListener("click", () => {
-
-    hideCheckout();
-
-  });
-
-}
-
-
-/* SUBMIT CHECKOUT */
-
-if (checkoutForm) {
-
-  checkoutForm.addEventListener("submit", event => {
-
-    event.preventDefault();
-
-    if (!cart.length) {
-      showToast("Your cart is empty.");
-      return;
-    }
-
-    const name = customerName.value.trim();
-    const phone = customerPhone.value.trim();
-    const delivery = deliveryOption.value;
-    const address = customerAddress.value.trim();
-    const pincode = customerPincode.value.trim();
-    const note = orderNote.value.trim();
-
-
-    /* PHONE VALIDATION */
-
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-
-      showToast("Please enter a valid 10-digit mobile number.");
-
-      customerPhone.focus();
-
-      return;
-
-    }
-
-
-    /* DELIVERY VALIDATION */
-
-    if (!delivery) {
-
-      showToast("Please select delivery option.");
-
-      deliveryOption.focus();
-
-      return;
-
-    }
-
-
-    /* ADDRESS VALIDATION */
-
-    if (delivery === "Home Delivery") {
-
-      if (address.length < 5) {
-
-        showToast("Please enter your full address.");
-
-        customerAddress.focus();
-
-        return;
-
-      }
-
-      if (!/^\d{6}$/.test(pincode)) {
-
-        showToast("Please enter a valid 6-digit pincode.");
-
-        customerPincode.focus();
-
-        return;
-
-      }
-
-    }
-
-
-    /* CREATE WHATSAPP MESSAGE */
-
-    let message =
-      "🛍️ *NEW STYLE DOCK ORDER*\n\n" +
-
-      "*CUSTOMER DETAILS*\n" +
-      `Name: ${name}\n` +
-      `Mobile: ${phone}\n` +
-      `Order type: ${delivery}\n`;
-
-
-    if (delivery === "Home Delivery") {
-
-      message +=
-        `Address: ${address}\n` +
-        `Pincode: ${pincode}\n`;
-
-    }
-
-
-    message +=
-      "\n*ORDER ITEMS*\n\n";
-
-
-    cart.forEach((item, index) => {
-
-      message +=
-        `${index + 1}. ${item.name}\n` +
-        `Size: ${item.size || "N/A"}\n` +
-        `Color: ${item.color || "N/A"}\n` +
-        `Qty: ${item.quantity}\n` +
-        `Price: ${formatPrice(item.price)}\n\n`;
-
-    });
-
-
-    message +=
-      `*TOTAL: ${formatPrice(cartTotalValue())}*\n`;
-
-
-    if (note) {
-
-      message +=
-        `\n*CUSTOMER NOTE*\n${note}\n`;
-
-    }
-
-
-    message +=
-      "\nPlease confirm product availability and final order details.\n" +
-      "Thank you! ❤️\n" +
-      "STYLE DOCK";
-
-
-    const whatsappURL =
-      `https://wa.me/${WHATSAPP_NUMBER}?text=` +
-      encodeURIComponent(message);
-
-
-    window.open(whatsappURL, "_blank");
-
-
-    showToast("Opening WhatsApp…");
-
-  });
-
-}
-
-
-/* GLOBAL */
-
-window.openCheckout = openCheckout;
