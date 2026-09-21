@@ -1,360 +1,238 @@
-const WHATSAPP_NUMBER = "918881717710";
+/* =========================================================
+   STYLE DOCK — COMPLETE APP.JS
+   ========================================================= */
 
 const PRODUCTS = [
   {
     id: 1,
-    name: "Classic Baggy Jeans",
-    category: "Jeans",
-    gender: "Men",
-    price: 450,
-    oldPrice: 549,
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85",
-    sizes: ["28", "30", "32", "34", "36"],
-    colors: ["Blue"],
-    stock: 10,
-    description: "Relaxed baggy-fit jeans for an easy everyday streetwear look.",
-    featured: true,
-    new: true
+    name: "Premium Oversized T-Shirt",
+    category: "Men",
+    type: "T-Shirts",
+    price: 599,
+    oldPrice: 799,
+    sizes: ["M", "L", "XL", "XXL"],
+    colors: ["Black", "White"],
+    image:
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=85"
   },
   {
     id: 2,
-    name: "Premium Oversized Tee",
-    category: "Tees",
-    gender: "Men",
-    price: 399,
-    oldPrice: 499,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85",
-    sizes: ["M", "L", "XL", "XXL"],
-    colors: ["White"],
-    stock: 12,
-    description: "Clean oversized silhouette with a comfortable everyday fit.",
-    featured: true,
-    new: true
+    name: "Classic Baggy Jeans",
+    category: "Men",
+    type: "Jeans",
+    price: 699,
+    oldPrice: 1099,
+    sizes: ["28", "30", "32", "34", "36"],
+    colors: ["Blue", "Black"],
+    image:
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=85"
   },
   {
     id: 3,
-    name: "Everyday Women's Kurti",
-    category: "Kurtis",
-    gender: "Women",
-    price: 599,
-    oldPrice: 749,
-    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85",
+    name: "Elegant Women's Kurti",
+    category: "Women",
+    type: "Kurtis",
+    price: 799,
+    oldPrice: 1199,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Maroon"],
-    stock: 8,
-    description: "Easy everyday kurti with a comfortable silhouette.",
-    featured: true,
-    new: false
+    colors: ["Green", "Pink", "Black"],
+    image:
+      "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1000&q=85"
   },
   {
     id: 4,
-    name: "Relaxed Cargo Pants",
-    category: "Men",
-    gender: "Men",
-    price: 699,
-    oldPrice: 899,
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85",
-    sizes: ["28", "30", "32", "34", "36"],
-    colors: ["Olive"],
-    stock: 7,
-    description: "Relaxed cargo styling with practical pockets.",
-    featured: true,
-    new: true
-  },{
+    name: "Women's Western Dress",
+    category: "Women",
+    type: "Western",
+    price: 999,
+    oldPrice: 1499,
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Black", "Blue"],
+    image:
+      "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
     id: 5,
-    name: "Classic Casual Shirt",
+    name: "Stylish Cargo Pants",
     category: "Men",
-    gender: "Men",
-    price: 649,
-    oldPrice: 799,
-    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85",
-    sizes: ["M", "L", "XL", "XXL"],
-    colors: ["Black"],
-    stock: 9,
-    description: "Versatile casual shirt for everyday outfits.",
-    featured: false,
-    new: true
+    type: "Cargos",
+    price: 899,
+    oldPrice: 1299,
+    sizes: ["28", "30", "32", "34", "36"],
+    colors: ["Olive", "Black", "Beige"],
+    image:
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85"
   },
   {
     id: 6,
-    name: "Women's Everyday Dress",
+    name: "Women's Cotton Top",
     category: "Women",
-    gender: "Women",
-    price: 799,
-    oldPrice: 999,
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85",
+    type: "Tops",
+    price: 499,
+    oldPrice: 699,
     sizes: ["S", "M", "L", "XL"],
-    colors: ["Black"],
-    stock: 6,
-    description: "Simple modern dress for an effortless everyday look.",
-    featured: true,
-    new: true
+    colors: ["White", "Pink", "Black"],
+    image:
+      "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85"
   },
   {
     id: 7,
     name: "Kids Casual Outfit",
     category: "Kids",
-    gender: "Kids",
-    price: 499,
-    oldPrice: 649,
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=85",
-    sizes: ["2-3Y", "4-5Y", "6-7Y", "8-9Y"],
-    colors: ["Blue"],
-    stock: 5,
-    description: "Comfortable casual kidswear for everyday adventures.",
-    featured: false,
-    new: true
+    type: "Kids Wear",
+    price: 699,
+    oldPrice: 999,
+    sizes: ["4Y", "6Y", "8Y", "10Y", "12Y"],
+    colors: ["Blue", "Yellow", "Black"],
+    image:
+      "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=85"
   },
   {
     id: 8,
-    name: "Minimal Everyday Watch",
-    category: "Accessories",
-    gender: "Unisex",
-    price: 899,
-    oldPrice: 1199,
-    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
-    sizes: ["FREE"],
-    colors: ["Black"],
-    stock: 4,
-    description: "Minimal everyday watch designed to complete your outfit.",
-    featured: false,
-    new: false
+    name: "Premium Casual Shirt",
+    category: "Men",
+    type: "Shirts",
+    price: 799,
+    oldPrice: 1099,
+    sizes: ["M", "L", "XL", "XXL"],
+    colors: ["White", "Blue", "Black"],
+    image:
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=85"
   }
 ];
 
-let cart = JSON.parse(localStorage.getItem("styleDockCart") || "[]");
 
-let currentCategory = "All";
-let currentSearch = "";
+/* =========================================================
+   GLOBAL STATE
+   ========================================================= */
+
 let currentProduct = null;
 let selectedSize = null;
 let selectedColor = null;
 
-const productGrid = document.getElementById("productGrid");
-const resultCount = document.getElementById("resultCount");
-const emptyState = document.getElementById("emptyState");
-const sortSelect = document.getElementById("sortSelect");
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
+let cart = [];
 
-const cartBtn = document.getElementById("cartBtn");
-const cartDrawer = document.getElementById("cartDrawer");
-const closeCart = document.getElementById("closeCart");
-const cartItems = document.getElementById("cartItems");
-const cartTotal = document.getElementById("cartTotal");
-const cartCount = document.getElementById("cartCount");
-const clearCart = document.getElementById("clearCart");
-const whatsappOrder = document.getElementById("whatsappOrder");
-
-const overlay = document.getElementById("overlay");
-
-const productModal = document.getElementById("productModal");
-const closeModal = document.getElementById("closeModal");
-const modalContent = document.getElementById("modalContent");
-
-const toast = document.getElementById("toast");
-
-const offersBtn = document.getElementById("offersBtn");
-const clearFilters = document.getElementById("clearFilters");
-
-function formatPrice(price) {
-  return "₹" + Number(price).toLocaleString("en-IN");
+try {
+  cart = JSON.parse(localStorage.getItem("styleDockCart")) || [];
+} catch (error) {
+  cart = [];
 }
 
-function discountPercent(price, oldPrice) {
-  if (!oldPrice || oldPrice <= price) return 0;
-  return Math.round(((oldPrice - price) / oldPrice) * 100);
+
+/* =========================================================
+   DOM HELPERS
+   ========================================================= */
+
+function $(selector) {
+  return document.querySelector(selector);
 }
+
+function $$(selector) {
+  return Array.from(document.querySelectorAll(selector));
+}
+
+
+/* =========================================================
+   SAVE CART
+   ========================================================= */
 
 function saveCart() {
   localStorage.setItem("styleDockCart", JSON.stringify(cart));
+  updateCartCount();
 }
 
-function showToast(message) {
-  if (!toast) return;
 
-  toast.textContent = message;
-  toast.classList.add("show");
+/* =========================================================
+   CART COUNT
+   ========================================================= */
 
-  clearTimeout(window.styleDockToastTimer);
+function updateCartCount() {
+  const count = cart.reduce(
+    (total, item) => total + Number(item.quantity || 0),
+    0
+  );
 
-  window.styleDockToastTimer = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2200);
-}
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-function getFilteredProducts() {
-  let list = [...PRODUCTS];
-
-  if (currentCategory !== "All") {
-    list = list.filter(product =>
-      product.category === currentCategory ||
-      product.gender === currentCategory
-    );
-  }
-
-  if (currentSearch.trim()) {
-    const query = currentSearch.toLowerCase();
-
-    list = list.filter(product =>
-      product.name.toLowerCase().includes(query) ||
-      product.category.toLowerCase().includes(query) ||
-      product.gender.toLowerCase().includes(query) ||
-      product.colors.join(" ").toLowerCase().includes(query)
-    );
-  }
-
-  return list;
-}
-
-function sortProducts(list) {
-  const value = sortSelect ? sortSelect.value :
-     "featured";
-
-  if (value === "low") {
-    return list.sort((a, b) => a.price - b.price);
-  }
-
-  if (value === "high") {
-    return list.sort((a, b) => b.price - a.price);
-  }
-
-  if (value === "new") {
-    return list.sort((a, b) => Number(b.new) - Number(a.new));
-  }
-
-  return list.sort((a, b) => {
-    if (a.featured !== b.featured) {
-      return Number(b.featured) - Number(a.featured);
-    }
-
-    return b.id - a.id;
+  $$(".cart-count").forEach((element) => {
+    element.textContent = count;
   });
 }
 
-function productCard(product) {
-  const discount = discountPercent(
-    product.price,
-    product.oldPrice
-  );
 
-  const stockText =
-    product.stock <= 0
-      ? "Out of stock"
-      : product.stock <= 3
-        ? `Only ${product.stock} left`
-        : "In stock";
+/* =========================================================
+   PRODUCT DISCOUNT
+   ========================================================= */
+
+function getDiscount(product) {
+  if (!product.oldPrice || product.oldPrice <= product.price) {
+    return 0;
+  }
+
+  return Math.round(
+    ((product.oldPrice - product.price) / product.oldPrice) * 100
+  );
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+function productCard(product) {
+  const discount = getDiscount(product);
 
   return `
-    <article class="product-card">
+    <article class="product-card" data-product-id="${product.id}">
 
-      <div style="position:relative">
-
-        <img
-          src="${product.image}"
-          alt="${escapeHtml(product.name)}"
-          loading="lazy"
-          onerror="this.src='tsd-logo.png'"
-        >
-
-        ${
-          product.new
-            ? `
-              <span style="
-                position:absolute;
-                top:12px;
-                left:12px;
-                background:#10251f;
-                color:#fff;
-                padding:6px 9px;
-                border-radius:999px;
-                font-size:10px;
-                font-weight:800;
-              ">
-                NEW
-              </span>
-            `
-            : ""
-        }
+      <div class="product-image-wrap">
 
         ${
           discount
-            ? `
-              <span style="
-                position:absolute;
-                top:12px;
-                right:12px;
-                background:#c7a45a;
-                color:#15140f;
-                padding:6px 9px;
-                border-radius:999px;
-                font-size:10px;
-                font-weight:800;
-              ">
-                ${discount}% OFF
-              </span>
-            `
+            ? `<span class="discount-badge">${discount}% OFF</span>`
             : ""
         }
+
+        <img
+          class="product-image"
+          src="${product.image}"
+          alt="${product.name}"
+          loading="lazy"
+          onerror="this.src='https://via.placeholder.com/700x900?text=STYLE+DOCK'"
+        >
+
+        <button
+          class="quick-view-btn"
+          type="button"
+          onclick="openProduct(${product.id})"
+        >
+          Quick View
+        </button>
 
       </div>
 
       <div class="product-info">
 
-        <p style="margin-bottom:5px">
-          ${escapeHtml(product.gender)}
-          ·
-          ${escapeHtml(product.category)}
-        </p>
+        <div class="product-category">
+          ${product.category} • ${product.type}
+        </div>
 
-        <h3>
-          ${escapeHtml(product.name)}
-        </h3>
+        <h3>${product.name}</h3>
 
         <div class="product-price">
-
-          ${formatPrice(product.price)}
+          <strong>₹${product.price}</strong>
 
           ${
             product.oldPrice
-              ? `
-                <del style="
-                  color:#999;
-                  font-size:12px;
-                  margin-left:5px;
-                ">
-                  ${formatPrice(product.oldPrice)}
-                </del>
-              `
+              ? `<span class="old-price">₹${product.oldPrice}</span>`
               : ""
           }
-
         </div>
 
-        <p style="
-          margin-top:5px;
-          color:${product.stock <= 3 ? "#a55a35" : "#55745f"};
-          font-weight:700;
-        ">
-          ${stockText}
-        </p>
-
         <button
+          class="add-cart-btn"
           type="button"
-          class="btn btn-dark"
-          style="width:100%;margin-top:10px"
-          onclick="openProduct(${product.id})"
+          onclick="addToCart(${product.id})"
         >
-          View details
+          Add to Cart
         </button>
 
       </div>
@@ -363,1053 +241,1001 @@ function productCard(product) {
   `;
 }
 
-function renderProducts() {
-  if (!productGrid) return;
 
-  let list = getFilteredProducts();
+/* =========================================================
+   RENDER PRODUCTS
+   ========================================================= */
 
-  list = sortProducts(list);
+function renderProducts(list = PRODUCTS) {
+  const container =
+    $("#productsGrid") ||
+    $(".products-grid") ||
+    $("#productGrid");
 
-  if (resultCount) {
-    resultCount.textContent =
-      `${list.length} ${list.length === 1 ? "style" : "styles"}`;
+  if (!container) {
+    console.warn("Product grid not found.");
+    return;
   }
 
   if (!list.length) {
-    productGrid.innerHTML = "";
-
-    if (emptyState) {
-      emptyState.hidden = false;
-    }
-
+    container.innerHTML = `
+      <div class="empty-products">
+        <h3>No products found</h3>
+        <p>Try another search or category.</p>
+      </div>
+    `;
     return;
   }
 
-  if (emptyState) {
-    emptyState.hidden = true;
+  container.innerHTML = list.map(productCard).join("");
+}
+
+
+/* =========================================================
+   FILTER PRODUCTS
+   ========================================================= */
+
+function filterProducts() {
+  const searchInput =
+    $("#searchInput") ||
+    $("#search") ||
+    document.querySelector('input[type="search"]');
+
+  const searchText = searchInput
+    ? searchInput.value.trim().toLowerCase()
+    : "";
+
+  const activeButton =
+    document.querySelector(".category-btn.active") ||
+    document.querySelector(".filter-btn.active");
+
+  const category =
+    activeButton?.dataset.category ||
+    activeButton?.dataset.filter ||
+    "All";
+
+  let filtered = PRODUCTS.filter((product) => {
+
+    const matchesSearch =
+      !searchText ||
+      product.name.toLowerCase().includes(searchText) ||
+      product.category.toLowerCase().includes(searchText) ||
+      product.type.toLowerCase().includes(searchText);
+
+    const matchesCategory =
+      category === "All" ||
+      category === "all" ||
+      product.category === category ||
+      product.type === category;
+
+    return matchesSearch && matchesCategory;
+  });
+
+  const sortSelect =
+    $("#sortSelect") ||
+    $("#sortProducts") ||
+    document.querySelector(".sort-select");
+
+  if (sortSelect) {
+    const sort = sortSelect.value;
+
+    if (sort === "low") {
+      filtered.sort((a, b) => a.price - b.price);
+    }
+
+    if (sort === "high") {
+      filtered.sort((a, b) => b.price - a.price);
+    }
+
+    if (sort === "name") {
+      filtered.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+    }
   }
 
-  productGrid.innerHTML =
-    list.map(productCard).join("");
+  renderProducts(filtered);
 }
 
-function openProduct(productId) {
-  const product = PRODUCTS.find(
-    p => p.id === Number(productId)
+
+/* =========================================================
+   CATEGORY BUTTONS
+   ========================================================= */
+
+function setupCategoryButtons() {
+  const buttons = $$(".category-btn, .filter-btn");
+
+  buttons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+      buttons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      filterProducts();
+    });
+
+  });
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function setupSearch() {
+  const inputs = $$(
+    "#searchInput, #search, input[type='search']"
   );
 
-  if (!product) return;
-
-  const modal = document.getElementById("productModal");
-  const content = document.getElementById("modalContent");
-
-  if (!modal || !content) return;
-
-  content.innerHTML = `
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;">
-
-      <img
-        src="${product.image}"
-        alt="${product.name}"
-        style="width:100%;border-radius:18px;object-fit:cover;"
-      >
-
-      <div>
-        <p style="color:#c7a45a;font-weight:700;">
-          ${product.gender} · ${product.category}
-        </p>
-
-        <h2 style="font-size:32px;margin:10px 0;">
-          ${product.name}
-        </h2>
-
-        <h3 style="font-size:25px;">
-          ${formatPrice(product.price)}
-        </h3>
-
-        ${
-          product.oldPrice
-            ? `<del style="color:#999">${formatPrice(product.oldPrice)}</del>`
-            : ""
-        }
-
-        <p style="color:#666;line-height:1.7;margin:20px 0;">
-          ${product.description}
-        </p>
-
-        <p style="color:#55745f;font-weight:700;">
-          ✓ ${product.stock} pieces available
-        </p>
-
-        <button
-          type="button"
-          class="btn btn-gold"
-          style="width:100%;margin-top:15px;"
-          onclick="closeProductModal()"
-        >
-          Close
-        </button>
-      </div>
-
-    </div>
-  `;
-
-  modal.hidden = false;
-  document.body.style.overflow = "hidden";
+  inputs.forEach((input) => {
+    input.addEventListener("input", filterProducts);
+  });
 }
+
+
+/* =========================================================
+   SORT
+   ========================================================= */
+
+function setupSort() {
+  const select =
+    $("#sortSelect") ||
+    $("#sortProducts") ||
+    document.querySelector(".sort-select");
+
+  if (select) {
+    select.addEventListener("change", filterProducts);
+  }
+}
+
+
+/* =========================================================
+   OPEN PRODUCT
+   ========================================================= */
+
+function openProduct(productId) {
+
+  const product = PRODUCTS.find(
+    (p) => p.id === Number(productId)
+  );
+
+  if (!product) {
+    showToast("Product not found.");
+    return;
+  }
+
+  const productModal =
+    $("#productModal") ||
+    $(".product-modal");
+
+  const modalContent =
+    $("#modalContent") ||
+    $(".modal-content-area");
+
+  if (!productModal || !modalContent) {
+    showToast("Product window could not open.");
+    return;
+  }
+
   currentProduct = product;
 
   selectedSize =
-    product.sizes?.[0] || null;
+    product.sizes && product.sizes.length
+      ? product.sizes[0]
+      : null;
 
   selectedColor =
-    product.colors?.[0] || null;
+    product.colors && product.colors.length
+      ? product.colors[0]
+      : null;
 
-  const discount = discountPercent(
-    product.price,
-    product.oldPrice
-  );
+  const discount = getDiscount(product);
 
   modalContent.innerHTML = `
+    <div class="product-modal-inner">
 
-    <div style="
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-      gap:25px;
-    ">
+      <button
+        class="modal-close"
+        type="button"
+        onclick="closeProductModal()"
+        aria-label="Close"
+      >
+        ×
+      </button>
 
-      <div>
+      <div class="product-modal-grid">
 
-        <img
-          src="${product.image}"
-          alt="${escapeHtml(product.name)}"
-          style="
-            width:100%;
-            aspect-ratio:4/5;
-            object-fit:cover;
-            border-radius:18px;
-            background:#f0ede6;
-          "
-          onerror="this.src='tsd-logo.png'"
-        >
-
-      </div>
-
-      <div>
-
-        <p class="eyebrow" style="color:#c7a45a">
-          ${escapeHtml(product.gender)}
-          ·
-          ${escapeHtml(product.category)}
-        </p>
-
-        <h2 style="
-          margin:0 0 10px;
-          font-family:'Playfair Display',Georgia,serif;
-          font-size:clamp(28px,4vw,42px);
-          line-height:1.05;
-        ">
-          ${escapeHtml(product.name)}
-        </h2>
-
-        <div style="
-          display:flex;
-          align-items:center;
-          gap:10px;
-          margin:15px 0;
-        ">
-
-          <strong style="
-            color:#10251f;
-            font-size:25px;
-          ">
-            ${formatPrice(product.price)}
-          </strong>
-
-          ${
-            product.oldPrice
-              ? `
-                <del style="color:#999">
-                  ${formatPrice(product.oldPrice)}
-                </del>
-              `
-              : ""
-          }
+        <div class="modal-image-area">
 
           ${
             discount
+              ? `<span class="discount-badge">${discount}% OFF</span>`
+              : ""
+          }
+
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="modal-product-image"
+            onerror="this.src='https://via.placeholder.com/700x900?text=STYLE+DOCK'"
+          >
+
+        </div>
+
+        <div class="modal-product-details">
+
+          <div class="product-category">
+            ${product.category} • ${product.type}
+          </div>
+
+          <h2>${product.name}</h2>
+
+          <div class="modal-price">
+
+            <strong>₹${product.price}</strong>
+
+            ${
+              product.oldPrice
+                ? `<span class="old-price">₹${product.oldPrice}</span>`
+                : ""
+            }
+
+            ${
+              discount
+                ? `<span class="save-text">Save ${discount}%</span>`
+                : ""
+            }
+
+          </div>
+
+          ${
+            product.sizes?.length
               ? `
-                <span style="
-                  padding:5px 8px;
-                  border-radius:999px;
-                  background:#eee4ca;
-                  color:#705a2e;
-                  font-size:11px;
-                  font-weight:800;
-                ">
-                  ${discount}% OFF
-                </span>
+                <div class="option-section">
+                  <h4>Select Size</h4>
+
+                  <div class="option-list">
+                    ${product.sizes
+                      .map(
+                        (size, index) => `
+                          <button
+                            type="button"
+                            class="option-btn size-option ${
+                              index === 0 ? "selected" : ""
+                            }"
+                            data-size="${size}"
+                            onclick="selectSize('${size}')"
+                          >
+                            ${size}
+                          </button>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                </div>
               `
               : ""
           }
 
-        </div>
-
-        <p style="
-          color:#77766f;
-          font-size:14px;
-          line-height:1.7;
-        ">
-          ${escapeHtml(product.description)}
-        </p>
-
-        <div style="margin-top:22px">
-
-          <strong style="
-            display:block;
-            margin-bottom:9px;
-          ">
-            Select size
-          </strong>
-
-          <div
-            id="sizeOptions"
-            style="
-              display:flex;
-              flex-wrap:wrap;
-              gap:8px;
-            "
-          >
-
-            ${product.sizes.map(size => `
-              <button
-                type="button"
-                class="size-option"
-                data-size="${escapeHtml(size)}"
-                style="
-                  min-width:48px;
-                  min-height:40px;
-                  padding:0 12px;
-                  border:1px solid #ddd7cb;
-                  border-radius:10px;
-                  background:white;
-                  font-weight:700;
-                "
-              >
-                ${escapeHtml(size)}
-              </button>
-            `).join("")}
-
-          </div>
-
-        </div>
-
-        <div style="margin-top:20px">
-
-          <strong style="
-            display:block;
-            margin-bottom:9px;
-          ">
-            Color
-          </strong>
-
-          <div
-            id="colorOptions"
-            style="
-              display:flex;
-              flex-wrap:wrap;
-              gap:8px;
-            "
-          >
-
-            ${product.colors.map(color => `
-              <button
-                type="button"
-                class="color-option"
-                data-color="${escapeHtml(color)}"
-                style="
-                  min-height:40px;
-                  padding:0 14px;
-                  border:1px solid #ddd7cb;
-                  border-radius:10px;
-                  background:white;
-                  font-weight:700;
-                "
-              >
-                ${escapeHtml(color)}
-              </button>
-            `).join("")}
-
-          </div>
-
-        </div>
-
-        <div style="
-          margin-top:22px;
-          padding:12px 14px;
-          border-radius:12px;
-          background:#f3f0e8;
-          color:#55534c;
-          font-size:12px;
-        ">
           ${
-            product.stock > 0
-              ? `✓ ${product.stock} pieces currently available`
-              : "Currently out of stock"
+            product.colors?.length
+              ? `
+                <div class="option-section">
+                  <h4>Select Color</h4>
+
+                  <div class="option-list">
+                    ${product.colors
+                      .map(
+                        (color, index) => `
+                          <button
+                            type="button"
+                            class="option-btn color-option ${
+                              index === 0 ? "selected" : ""
+                            }"
+                            data-color="${color}"
+                            onclick="selectColor('${color}')"
+                          >
+                            ${color}
+                          </button>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              `
+              : ""
           }
+
+          <div class="modal-actions">
+
+            <button
+              type="button"
+              class="primary-btn"
+              onclick="addCurrentProductToCart()"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              type="button"
+              class="whatsapp-btn"
+              onclick="buyCurrentProductOnWhatsApp()"
+            >
+              Buy on WhatsApp
+            </button>
+
+          </div>
+
+          <div class="product-note">
+            ✓ Fixed Price Store<br>
+            ✓ Premium Quality<br>
+            ✓ Easy WhatsApp Ordering
+          </div>
+
         </div>
-
-        <button
-          type="button"
-          id="modalAddToCart"
-          class="btn btn-gold"
-          style="width:100%;margin-top:15px"
-          ${product.stock <= 0 ? "disabled" : ""}
-        >
-          ${product.stock > 0 ? "Add to cart" : "Out of stock"}
-        </button>
-
-        <button
-          type="button"
-          id="modalBuyNow"
-          class="btn btn-dark"
-          style="width:100%;margin-top:9px"
-          ${product.stock <= 0 ? "disabled" : ""}
-        >
-          Buy now
-        </button>
 
       </div>
 
     </div>
   `;
 
-  setupProductOptions();
-
   productModal.hidden = false;
+  productModal.classList.add("open");
 
   document.body.style.overflow = "hidden";
 }
 
-function setupProductOptions() {
-  const sizeButtons =
-    document.querySelectorAll(".size-option");
 
-  const colorButtons =
-    document.querySelectorAll(".color-option");
+/* =========================================================
+   CLOSE PRODUCT MODAL
+   ========================================================= */
 
-  sizeButtons.forEach(button => {
+function closeProductModal() {
 
-    if (button.dataset.size === selectedSize) {
-      selectButtonStyle(button, true);
-    }
+  const modal =
+    $("#productModal") ||
+    $(".product-modal");
 
-    button.addEventListener("click", () => {
+  if (!modal) return;
 
-      selectedSize =
-        button.dataset.size;
+  modal.hidden = true;
+  modal.classList.remove("open");
 
-      sizeButtons.forEach(btn => {
-        selectButtonStyle(
-          btn,
-          btn === button
-        );
-      });
-
-    });
-
-  });
-
-  colorButtons.forEach(button => {
-
-    if (button.dataset.color === selectedColor) {
-      selectButtonStyle(button, true);
-    }
-
-    button.addEventListener("click", () => {
-
-      selectedColor =
-        button.dataset.color;
-
-      colorButtons.forEach(btn => {
-        selectButtonStyle(
-          btn,
-          btn === button
-        );
-      });
-
-    });
-
-  });
-
-  const addButton =
-    document.getElementById("modalAddToCart");
-
-  if (addButton) {
-
-    addButton.addEventListener("click", () => {
-
-      addToCart(
-        currentProduct,
-        selectedSize,
-        selectedColor
-      );
-
-    });
-
-  }
-
-  const buyButton =
-    document.getElementById("modalBuyNow");
-
-  if (buyButton) {
-
-    buyButton.addEventListener("click", () => {
-
-      addToCart(
-        currentProduct,
-        selectedSize,
-        selectedColor
-      );
-
-      closeProductModal();
-
-      openCart();
-
-    });
-
-  }
+  document.body.style.overflow = "";
 }
 
-function selectButtonStyle(button, active) {
 
-  if (active) {
+/* =========================================================
+   SIZE SELECT
+   ========================================================= */
 
-    button.style.background = "#10251f";
-    button.style.color = "#fff";
-    button.style.borderColor = "#10251f";
+function selectSize(size) {
 
-  } else {
+  selectedSize = size;
 
-    button.style.background = "white";
-    button.style.color = "#171816";
-    button.style.borderColor = "#ddd7cb";
-
-  }
+  $$(".size-option").forEach((button) => {
+    button.classList.toggle(
+      "selected",
+      button.dataset.size === size
+    );
+  });
 }
 
-function addToCart(product, size, color) {
 
-  if (!product || product.stock <= 0) {
+/* =========================================================
+   COLOR SELECT
+   ========================================================= */
 
-    showToast("This product is out of stock.");
+function selectColor(color) {
 
+  selectedColor = color;
+
+  $$(".color-option").forEach((button) => {
+    button.classList.toggle(
+      "selected",
+      button.dataset.color === color
+    );
+  });
+}
+
+
+/* =========================================================
+   ADD CURRENT PRODUCT TO CART
+   ========================================================= */
+
+function addCurrentProductToCart() {
+
+  if (!currentProduct) {
+    showToast("Product not found.");
     return;
   }
 
-  const existing = cart.find(item =>
-    item.productId === product.id &&
-    item.size === size &&
-    item.color === color
+  addToCart(
+    currentProduct.id,
+    selectedSize,
+    selectedColor
+  );
+
+  closeProductModal();
+}
+
+
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
+
+function addToCart(productId, size = null, color = null) {
+  const product = PRODUCTS.find(
+    (p) => p.id === Number(productId)
+  );
+
+  if (!product) {
+    showToast("Product not found.");
+    return;
+  }
+
+  if (!size && product.sizes?.length) {
+    size = product.sizes[0];
+  }
+
+  if (!color && product.colors?.length) {
+    color = product.colors[0];
+  }
+
+  const existing = cart.find(
+    (item) =>
+      Number(item.productId) === product.id &&
+      item.size === size &&
+      item.color === color
   );
 
   if (existing) {
-
-    if (existing.quantity >= product.stock) {
-
-      showToast(
-        "Maximum available stock reached."
-      );
-
-      return;
-    }
-
     existing.quantity += 1;
-
   } else {
-
     cart.push({
       productId: product.id,
-      name: product.name,
-      price: product.price,
-      image: product.image,
-      size: size,
-      color: color,
+      size,
+      color,
       quantity: 1
     });
-
   }
 
   saveCart();
 
   renderCart();
 
-  updateCartCount();
-   showToast("Added to your cart.");
+  showToast(`${product.name} added to cart.`);
 }
 
+
+/* =========================================================
+   REMOVE FROM CART
+   ========================================================= */
+
 function removeFromCart(index) {
+
+  if (index < 0 || index >= cart.length) {
+    return;
+  }
 
   cart.splice(index, 1);
 
   saveCart();
-
   renderCart();
-
-  updateCartCount();
 }
 
-function changeQuantity(index, change) {
+
+/* =========================================================
+   CHANGE CART QUANTITY
+   ========================================================= */
+
+function changeCartQuantity(index, change) {
 
   const item = cart[index];
 
   if (!item) return;
 
-  const product =
-    PRODUCTS.find(
-      product => product.id === item.productId
-    );
+  item.quantity += change;
 
-  if (!product) return;
-
-  const newQuantity =
-    item.quantity + change;
-
-  if (newQuantity <= 0) {
-
-    removeFromCart(index);
-
-    return;
+  if (item.quantity <= 0) {
+    cart.splice(index, 1);
   }
-
-  if (newQuantity > product.stock) {
-
-    showToast(
-      "Maximum available stock reached."
-    );
-
-    return;
-  }
-
-  item.quantity = newQuantity;
 
   saveCart();
-
   renderCart();
+}
+
+
+/* =========================================================
+   CART TOTAL
+   ========================================================= */
+
+function getCartTotal() {
+
+  return cart.reduce((total, item) => {
+
+    const product = PRODUCTS.find(
+      (p) => p.id === Number(item.productId)
+    );
+
+    if (!product) return total;
+
+    return total + product.price * item.quantity;
+
+  }, 0);
+}
+
+
+/* =========================================================
+   RENDER CART
+   ========================================================= */
+
+function renderCart() {
+
+  const cartContainer =
+    $("#cartItems") ||
+    $(".cart-items");
+
+  const cartTotal =
+    $("#cartTotal") ||
+    $(".cart-total");
+
+  if (!cartContainer) {
+    updateCartCount();
+    return;
+  }
+
+  if (!cart.length) {
+
+    cartContainer.innerHTML = `
+      <div class="empty-cart">
+        <h3>Your cart is empty</h3>
+        <p>Add something you love from STYLE DOCK.</p>
+      </div>
+    `;
+
+    if (cartTotal) {
+      cartTotal.textContent = "₹0";
+    }
+
+    updateCartCount();
+
+    return;
+  }
+
+  cartContainer.innerHTML = cart
+    .map((item, index) => {
+
+      const product = PRODUCTS.find(
+        (p) => p.id === Number(item.productId)
+      );
+
+      if (!product) return "";
+
+      return `
+        <div class="cart-item">
+
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            onerror="this.src='https://via.placeholder.com/150x180?text=STYLE+DOCK'"
+          >
+
+          <div class="cart-item-info">
+
+            <h4>${product.name}</h4>
+
+            <div class="cart-meta">
+              ${
+                item.size
+                  ? `Size: ${item.size}`
+                  : ""
+              }
+
+              ${
+                item.color
+                  ? ` • Color: ${item.color}`
+                  : ""
+              }
+            </div>
+
+            <strong>₹${product.price}</strong>
+
+            <div class="quantity-controls">
+
+              <button
+                type="button"
+                onclick="changeCartQuantity(${index}, -1)"
+              >
+                −
+              </button>
+
+              <span>${item.quantity}</span>
+
+              <button
+                type="button"
+                onclick="changeCartQuantity(${index}, 1)"
+              >
+                +
+              </button>
+
+            </div>
+
+            <button
+              type="button"
+              class="remove-cart-btn"
+              onclick="removeFromCart(${index})"
+            >
+              Remove
+            </button>
+
+          </div>
+
+        </div>
+      `;
+
+    })
+    .join("");
+
+  if (cartTotal) {
+    cartTotal.textContent =
+      `₹${getCartTotal().toLocaleString("en-IN")}`;
+  }
 
   updateCartCount();
 }
 
-function cartTotalValue() {
 
-  return cart.reduce(
-    (total, item) =>
-      total + item.price * item.quantity,
-    0
-  );
-}
-
-function updateCartCount() {
-
-  if (!cartCount) return;
-
-  const count =
-    cart.reduce(
-      (total, item) =>
-        total + item.quantity,
-      0
-    );
-
-  cartCount.textContent = count;
-}
-
-function renderCart() {
-
-  if (!cartItems) return;
-
-  if (!cart.length) {
-
-    cartItems.innerHTML = `
-      <div style="
-        padding:45px 15px;
-        text-align:center;
-        color:#77766f;
-      ">
-
-        <div style="
-          font-size:38px;
-          margin-bottom:10px;
-        ">
-          🛍️
-        </div>
-
-        <strong style="
-          display:block;
-          color:#171816;
-          font-size:17px;
-          margin-bottom:5px;
-        ">
-          Your cart is empty
-        </strong>
-
-        <span style="font-size:13px">
-          Add something you love.
-        </span>
-
-      </div>
-    `;
-
-  } else {
-
-    cartItems.innerHTML = cart.map(
-      (item, index) => `
-
-      <div style="
-        display:grid;
-        grid-template-columns:76px 1fr auto;
-        gap:12px;
-        padding:15px 0;
-        border-bottom:1px solid #e7e2d8;
-      ">
-
-        <img
-          src="${item.image}"
-          alt="${escapeHtml(item.name)}"
-          style="
-            width:76px;
-            height:92px;
-            object-fit:cover;
-            border-radius:12px;
-          "
-          onerror="this.src='tsd-logo.png'"
-        >
-
-        <div>
-
-          <strong style="
-            display:block;
-            font-size:13px;
-          ">
-            ${escapeHtml(item.name)}
-          </strong>
-
-          <div style="
-            margin-top:5px;
-            color:#77766f;
-            font-size:11px;
-          ">
-            Size: ${escapeHtml(item.size || "—")}
-            ·
-            Color: ${escapeHtml(item.color || "—")}
-          </div>
-
-          <div style="
-            margin-top:6px;
-            color:#10251f;
-            font-weight:800;
-          ">
-            ${formatPrice(item.price)}
-          </div>
-
-          <div style="
-            display:flex;
-            align-items:center;
-            gap:7px;
-            margin-top:9px;
-          ">
-
-            <button
-              type="button"
-              onclick="changeQuantity(${index},-1)"
-              style="
-                width:29px;
-                height:29px;
-              "
-            >
-              −
-            </button>
-
-            <strong>
-              ${item.quantity}
-            </strong>
-
-            <button
-              type="button"
-              onclick="changeQuantity(${index},1)"
-              style="
-                width:29px;
-                height:29px;
-              "
-            >
-              +
-            </button>
-
-          </div>
-
-        </div>
-
-        <button
-          type="button"
-          onclick="removeFromCart(${index})"
-          style="
-            border:0;
-            background:none;
-            color:#9a4035;
-            font-size:20px;
-          "
-        >
-          ×
-        </button>
-
-      </div>
-
-    `
-    ).join("");
-
-  }
-
-  if (cartTotal) {
-
-    cartTotal.textContent =
-      formatPrice(cartTotalValue());
-
-  }
-}
+/* =========================================================
+   OPEN CART
+   ========================================================= */
 
 function openCart() {
 
-  if (!cartDrawer) return;
+  const cartModal =
+    $("#cartModal") ||
+    $(".cart-modal");
 
-  cartDrawer.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-  if (overlay) {
-    overlay.hidden = false;
+  if (!cartModal) {
+    renderCart();
+    return;
   }
+
+  renderCart();
+
+  cartModal.hidden = false;
+  cartModal.classList.add("open");
 
   document.body.style.overflow = "hidden";
 }
 
-function closeCartDrawer() {
 
-  if (!cartDrawer) return;
+/* =========================================================
+   CLOSE CART
+   ========================================================= */
 
-  cartDrawer.setAttribute(
-    "aria-hidden",
-    "true"
-  );
+function closeCart() {
 
-  if (overlay) {
-    overlay.hidden = true;
-  }
+  const cartModal =
+    $("#cartModal") ||
+    $(".cart-modal");
 
-  document.body.style.overflow = "";
-}
+  if (!cartModal) return;
 
-function closeProductModal() {
-
-  if (!productModal) return;
-
-  productModal.hidden = true;
+  cartModal.hidden = true;
+  cartModal.classList.remove("open");
 
   document.body.style.overflow = "";
 }
 
-function sendWhatsAppOrder() {
+
+/* =========================================================
+   WHATSAPP ORDER
+   ========================================================= */
+
+function orderOnWhatsApp() {
 
   if (!cart.length) {
-
     showToast("Your cart is empty.");
-
     return;
   }
 
+  const phone = "918881717710";
+
   let message =
-    "Hello STYLE DOCK! 👋\n\n" +
-    "I want to order:\n\n";
+    "Hello STYLE DOCK!%0A%0A" +
+    "I want to order:%0A%0A";
 
   cart.forEach((item, index) => {
 
-    message +=
-      `${index + 1}. ${item.name}\n` +
-      `Size: ${item.size || "N/A"}\n` +
-      `Color: ${item.color || "N/A"}\n` +
-      `Qty: ${item.quantity}\n` +
-      `Price: ${formatPrice(item.price)}\n\n`;
+    const product = PRODUCTS.find(
+      (p) => p.id === Number(item.productId)
+    );
 
+    if (!product) return;
+
+    message +=
+      `${index + 1}. ${product.name}%0A` +
+      `Price: ₹${product.price}%0A` +
+      `Qty: ${item.quantity}%0A` +
+      `${item.size ? `Size: ${item.size}%0A` : ""}` +
+      `${item.color ? `Color: ${item.color}%0A` : ""}` +
+      `%0A`;
   });
 
   message +=
-    `Total: ${formatPrice(cartTotalValue())}\n\n` +
-    "Please confirm availability. Thank you!";
+    `Total: ₹${getCartTotal().toLocaleString("en-IN")}%0A%0A` +
+    "Please confirm availability.";
 
   const url =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=` +
-    encodeURIComponent(message);
+    `https://wa.me/${phone}?text=${message}`;
 
   window.open(url, "_blank");
 }
 
-function performSearch() {
 
-  currentSearch =
-    searchInput
-      ? searchInput.value.trim()
-      : "";
+/* =========================================================
+   BUY CURRENT PRODUCT ON WHATSAPP
+   ========================================================= */
 
-  renderProducts();
+function buyCurrentProductOnWhatsApp() {
 
-  document
-    .getElementById("shop")
-    ?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+  if (!currentProduct) {
+    showToast("Product not found.");
+    return;
+  }
+
+  const phone = "918881717710";
+
+  let message =
+    "Hello STYLE DOCK!%0A%0A" +
+    "I want to buy:%0A%0A" +
+    `Product: ${currentProduct.name}%0A` +
+    `Price: ₹${currentProduct.price}%0A` +
+    `${selectedSize ? `Size: ${selectedSize}%0A` : ""}` +
+    `${selectedColor ? `Color: ${selectedColor}%0A` : ""}` +
+    `%0APlease confirm availability.`;
+
+  window.open(
+    `https://wa.me/${phone}?text=${message}`,
+    "_blank"
+  );
 }
 
-function setCategory(category) {
 
-  currentCategory = category;
+/* =========================================================
+   TOAST
+   ========================================================= */
 
-  document
-    .querySelectorAll(".cat")
-    .forEach(button => {
+function showToast(message) {
 
-      button.classList.toggle(
-        "active",
-        button.dataset.cat === category
-      );
+  let toast = $("#styleDockToast");
 
-    });
+  if (!toast) {
 
-  renderProducts();
+    toast = document.createElement("div");
+
+    toast.id = "styleDockToast";
+
+    toast.style.cssText = `
+      position:fixed;
+      left:50%;
+      bottom:25px;
+      transform:translateX(-50%);
+      z-index:99999;
+      background:#171717;
+      color:#fff;
+      padding:13px 20px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      opacity:0;
+      transition:all .25s ease;
+      pointer-events:none;
+    `;
+
+    document.body.appendChild(toast);
+  }
+
+  toast.textContent = message;
+
+  toast.style.opacity = "1";
+  toast.style.bottom = "35px";
+
+  clearTimeout(toast._timer);
+
+  toast._timer = setTimeout(() => {
+
+    toast.style.opacity = "0";
+    toast.style.bottom = "25px";
+
+  }, 2200);
 }
 
-document
-  .querySelectorAll(".cat")
-  .forEach(button => {
 
-    button.addEventListener(
-      "click",
-      () => setCategory(button.dataset.cat)
-    );
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
+function setupMobileMenu() {
+
+  const menuButton =
+    $("#menuButton") ||
+    $(".menu-button") ||
+    $(".hamburger");
+
+  const menu =
+    $("#mobileMenu") ||
+    $(".mobile-menu");
+
+  if (!menuButton || !menu) return;
+
+  menuButton.addEventListener("click", () => {
+    menu.classList.toggle("open");
   });
-
-if (searchBtn) {
-
-  searchBtn.addEventListener(
-    "click",
-    performSearch
-  );
-
 }
 
-if (searchInput) {
 
-  searchInput.addEventListener(
-    "keydown",
-    event => {
+/* =========================================================
+   MODAL BACKDROP CLICK
+   ========================================================= */
 
-      if (event.key === "Enter") {
-        performSearch();
-      }
+function setupModalClose() {
 
-    }
-  );
+  const productModal =
+    $("#productModal") ||
+    $(".product-modal");
 
-  searchInput.addEventListener(
-    "input",
-    () => {
+  if (productModal) {
 
-      currentSearch =
-        searchInput.value.trim();
-
-      renderProducts();
-
-    }
-  );
-
-}
-
-if (sortSelect) {
-
-  sortSelect.addEventListener(
-    "change",
-    renderProducts
-  );
-
-}
-
-if (cartBtn) {
-
-  cartBtn.addEventListener(
-    "click",
-    openCart
-  );
-
-}
-
-if (closeCart) {
-
-  closeCart.addEventListener(
-    "click",
-    closeCartDrawer
-  );
-
-}
-
-if (overlay) {
-
-  overlay.addEventListener(
-    "click",
-    closeCartDrawer
-  );
-
-}
-
-if (clearCart) {
-
-  clearCart.addEventListener(
-    "click",
-    () => {
-
-      cart = [];
-
-      saveCart();
-
-      renderCart();
-
-      updateCartCount();
-
-      showToast("Cart cleared.");
-
-    }
-  );
-
-}
-
-if (whatsappOrder) {
-
-  whatsappOrder.addEventListener(
-    "click",
-    sendWhatsAppOrder
-  );
-
-}
-
-if (closeModal) {
-
-  closeModal.addEventListener(
-    "click",
-    closeProductModal
-  );
-
-}
-
-if (productModal) {
-
-  productModal.addEventListener(
-    "click",
-    event => {
+    productModal.addEventListener("click", (event) => {
 
       if (event.target === productModal) {
         closeProductModal();
       }
 
-    }
-  );
-
-}
-
-if (offersBtn) {
-
-  offersBtn.addEventListener(
-    "click",
-    () => {
-
-      document
-        .getElementById("offers")
-        ?.scrollIntoView({
-          behavior: "smooth"
-        });
-
-    }
-  );
-
-}
-
-if (clearFilters) {
-
-  clearFilters.addEventListener(
-    "click",
-    () => {
-
-      currentCategory = "All";
-
-      currentSearch = "";
-
-      if (searchInput) {
-        searchInput.value = "";
-      }
-
-      if (sortSelect) {
-        sortSelect.value = "featured";
-      }
-
-      document
-        .querySelectorAll(".cat")
-        .forEach(button => {
-
-          button.classList.toggle(
-            "active",
-            button.dataset.cat === "All"
-          );
-
-        });
-
-      renderProducts();
-
-    }
-  );
-
-}
-
-document.addEventListener(
-  "keydown",
-  event => {
-
-    if (event.key !== "Escape") return;
-
-    if (
-      productModal &&
-      !productModal.hidden
-    ) {
-      closeProductModal();
-    }
-
-    if (
-      cartDrawer &&
-      cartDrawer.getAttribute(
-        "aria-hidden"
-      ) === "false"
-    ) {
-      closeCartDrawer();
-    }
-
+    });
   }
-);
 
-renderProducts();
+  const cartModal =
+    $("#cartModal") ||
+    $(".cart-modal");
 
-renderCart();
-updateCartCount();
+  if (cartModal) {
 
-/* Make functions available to HTML buttons */
+    cartModal.addEventListener("click", (event) => {
+
+      if (event.target === cartModal) {
+        closeCart();
+      }
+
+    });
+  }
+}
+
+
+/* =========================================================
+   ESC KEY
+   ========================================================= */
+
+document.addEventListener("keydown", (event) => {
+
+  if (event.key !== "Escape") return;
+
+  closeProductModal();
+  closeCart();
+
+});
+
+
+/* =========================================================
+   GLOBAL BUTTON CONNECTIONS
+   ========================================================= */
+
+function setupCartButtons() {
+
+  $$(
+    "#cartButton, .cart-button, [data-cart-button]"
+  ).forEach((button) => {
+
+    button.addEventListener("click", openCart);
+
+  });
+
+  $$(
+    "#checkoutButton, .checkout-button, [data-checkout]"
+  ).forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      orderOnWhatsApp
+    );
+
+  });
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+function initStyleDock() {
+
+  renderProducts(PRODUCTS);
+
+  renderCart();
+
+  updateCartCount();
+
+  setupCategoryButtons();
+
+  setupSearch();
+
+  setupSort();
+
+  setupMobileMenu();
+
+  setupModalClose();
+
+  setupCartButtons();
+
+}
+
+
+/* =========================================================
+   DOM READY
+   ========================================================= */
+
+if (document.readyState === "loading") {
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    initStyleDock
+  );
+
+} else {
+
+  initStyleDock();
+
+}
+
+
+/* =========================================================
+   GLOBAL EXPORTS
+   ========================================================= */
+
+window.PRODUCTS = PRODUCTS;
+
 window.openProduct = openProduct;
-window.removeFromCart = removeFromCart;
-window.changeQuantity = changeQuantity;
 window.closeProductModal = closeProductModal;
-     
+
+window.selectSize = selectSize;
+window.selectColor = selectColor;
+
+window.addToCart = addToCart;
+window.addCurrentProductToCart =
+  addCurrentProductToCart;
+
+window.removeFromCart = removeFromCart;
+window.changeCartQuantity =
+  changeCartQuantity;
+
+window.openCart = openCart;
+window.closeCart = closeCart;
+
+window.orderOnWhatsApp =
+  orderOnWhatsApp;
+
+window.buyCurrentProductOnWhatsApp =
+  buyCurrentProductOnWhatsApp;
+
+window.filterProducts =
+  filterProducts;
+window.showToast =
+  showToast;
