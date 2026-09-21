@@ -1032,3 +1032,258 @@ footer{
     font-size:11px !important;
   }
 }
+/* =========================================================
+   STYLE DOCK — PRODUCT + CART PREMIUM UPGRADE
+   ========================================================= */
+
+/* PRODUCT CARD */
+
+.product-card{
+  overflow:hidden;
+  background:#fff;
+  border:1px solid #e5e0d7;
+  border-radius:20px;
+}
+
+.product-card > div:first-child{
+  position:relative;
+}
+
+.product-card img{
+  transition:transform .45s ease;
+}
+
+.product-card:hover img{
+  transform:scale(1.035);
+}
+
+.product-info{
+  background:#fff;
+}
+
+.product-info h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  font-weight:700;
+}
+
+.product-info .btn{
+  min-height:43px;
+}
+
+
+/* PRODUCT MODAL */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(5,10,8,.65);
+  backdrop-filter:blur(8px);
+}
+
+.modal[hidden]{
+  display:none;
+}
+
+.modal-card{
+  position:relative;
+  width:min(940px,96vw);
+  max-height:92dvh;
+  overflow-y:auto;
+  padding:26px;
+  border:1px solid rgba(199,164,90,.35);
+  border-radius:25px;
+  background:#fffdf8;
+  box-shadow:0 30px 90px rgba(0,0,0,.35);
+}
+
+.modal-card .close{
+  position:absolute;
+  z-index:5;
+  top:13px;
+  right:13px;
+  width:40px;
+  height:40px;
+  border:1px solid #ddd7cb;
+  border-radius:50%;
+  background:#fff;
+  color:#171816;
+  font-size:25px;
+  line-height:1;
+}
+
+
+/* SIZE / COLOR BUTTONS */
+
+.size-option,
+.color-option{
+  transition:.18s ease;
+}
+
+.size-option:hover,
+.color-option:hover{
+  border-color:#c7a45a !important;
+  transform:translateY(-1px);
+}
+
+
+/* CART DRAWER */
+
+.cart-drawer{
+  width:min(455px,94vw);
+  padding:0;
+  background:#fffdf8;
+}
+
+.drawer-head{
+  position:sticky;
+  top:0;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 22px;
+  background:#fffdf8;
+  border-bottom:1px solid #e7e2d8;
+}
+
+.drawer-head h2{
+  margin:0;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:30px;
+}
+
+.drawer-head .close{
+  width:38px;
+  height:38px;
+  border:1px solid #ddd7cb;
+  border-radius:50%;
+  background:white;
+  font-size:24px;
+}
+
+.cart-items{
+  padding:0 22px;
+}
+
+.cart-bottom{
+  position:sticky;
+  bottom:0;
+  z-index:4;
+  padding:18px 22px 22px;
+  background:rgba(255,253,248,.98);
+  border-top:1px solid #e7e2d8;
+  box-shadow:0 -12px 30px rgba(20,25,21,.07);
+}
+
+.total{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:13px;
+  font-size:14px;
+}
+
+.total strong{
+  color:#10251f;
+  font-size:23px;
+}
+
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  z-index:200;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,20px);
+  max-width:calc(100vw - 30px);
+  padding:12px 17px;
+  border-radius:12px;
+  background:#10251f;
+  color:white;
+  font-size:13px;
+  font-weight:700;
+  opacity:0;
+  pointer-events:none;
+  box-shadow:0 15px 35px rgba(0,0,0,.2);
+  transition:.25s ease;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+
+/* MOBILE MODAL */
+
+@media(max-width:700px){
+
+  .modal{
+    align-items:flex-end;
+    padding:0;
+  }
+
+  .modal-card{
+    width:100%;
+    max-height:94dvh;
+    padding:18px;
+    border-radius:24px 24px 0 0;
+  }
+
+  .modal-card > #modalContent > div{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  .modal-card img{
+    max-height:390px;
+  }
+
+  .drawer-head{
+    padding:17px;
+  }
+
+  .cart-items{
+    padding:0 17px;
+  }
+
+  .cart-bottom{
+    padding:15px 17px 19px;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:420px){
+
+  .modal-card{
+    padding:14px;
+  }
+
+  .modal-card img{
+    max-height:330px;
+  }
+
+  .drawer-head h2{
+    font-size:25px;
+  }
+
+}
+
+
+/* DISABLED BUTTON */
+
+button:disabled{
+  cursor:not-allowed !important;
+  opacity:.5 !important;
+  transform:none !important;
+}
