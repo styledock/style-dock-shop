@@ -988,7 +988,9 @@ footer{
 .hero{
   background:
     radial-gradient(circle at 85% 18%,rgba(199,164,90,.28),transparent 25%),
-    radial-gradient(circle at 15% 85%,rgba(
+    radial-gradient(circle at 15% 85%,rgba(67,120,102,.28),transparent 30%),
+    linear-gradient(135deg,#0c1c18,#17352d 55%,#0d211c);
+}
 /* ===== MOBILE HERO FIX ===== */
 
 .hero-visual{
