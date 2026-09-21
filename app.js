@@ -398,16 +398,65 @@ function openProduct(productId) {
     p => p.id === Number(productId)
   );
 
-  if (!product) {
-    showToast("Product not found.");
-    return;
-  }
+  if (!product) return;
 
-  if (!productModal || !modalContent) {
-    showToast("Product window could not open.");
-    return;
-  }
+  const modal = document.getElementById("productModal");
+  const content = document.getElementById("modalContent");
 
+  if (!modal || !content) return;
+
+  content.innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;">
+
+      <img
+        src="${product.image}"
+        alt="${product.name}"
+        style="width:100%;border-radius:18px;object-fit:cover;"
+      >
+
+      <div>
+        <p style="color:#c7a45a;font-weight:700;">
+          ${product.gender} · ${product.category}
+        </p>
+
+        <h2 style="font-size:32px;margin:10px 0;">
+          ${product.name}
+        </h2>
+
+        <h3 style="font-size:25px;">
+          ${formatPrice(product.price)}
+        </h3>
+
+        ${
+          product.oldPrice
+            ? `<del style="color:#999">${formatPrice(product.oldPrice)}</del>`
+            : ""
+        }
+
+        <p style="color:#666;line-height:1.7;margin:20px 0;">
+          ${product.description}
+        </p>
+
+        <p style="color:#55745f;font-weight:700;">
+          ✓ ${product.stock} pieces available
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-gold"
+          style="width:100%;margin-top:15px;"
+          onclick="closeProductModal()"
+        >
+          Close
+        </button>
+      </div>
+
+    </div>
+  `;
+
+  modal.hidden = false;
+  document.body.style.overflow = "hidden";
+}
   currentProduct = product;
 
   selectedSize =
