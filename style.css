@@ -989,3 +989,46 @@ footer{
   background:
     radial-gradient(circle at 85% 18%,rgba(199,164,90,.28),transparent 25%),
     radial-gradient(circle at 15% 85%,rgba(
+/* ===== MOBILE HERO FIX ===== */
+
+.hero-visual{
+  position:relative !important;
+  min-height:320px !important;
+}
+
+.hero-card{
+  background-image:none !important;
+  overflow:hidden !important;
+}
+
+@media(max-width:560px){
+
+  .hero-visual{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+    min-height:0 !important;
+    margin-top:28px !important;
+  }
+
+  .hero-card{
+    position:relative !important;
+    min-height:150px !important;
+    height:150px !important;
+    padding:20px !important;
+  }
+
+  .hero-card-a{
+    grid-column:1 / -1 !important;
+    min-height:175px !important;
+    height:175px !important;
+  }
+
+  .hero-card strong{
+    font-size:25px !important;
+  }
+
+  .hero-card span{
+    font-size:11px !important;
+  }
+}
