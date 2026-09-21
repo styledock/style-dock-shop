@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10130f" />
+  <meta name="description" content="Style Dock — Men, Women & Kids fashion. Fixed price. Premium quality. Latest trends. Affordable prices." />
+  <title>STYLE DOCK — Fashion Store</title>
+  <link rel="icon" href="assets/logo-emblem.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">FIXED PRICE STORE · Premium Quality · Latest Trends · Affordable Prices</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Style Dock home">
+      <img src="assets/logo-wordmark.png" alt="Style Dock" />
+    </a>
+    <button class="mobile-search" id="mobileSearchBtn" aria-label="Search">⌕</button>
+    <div class="search-wrap" id="searchWrap">
+      <input id="searchInput" type="search" placeholder="Search jeans, kurtis, tees, footwear…" autocomplete="off" />
+      <button id="searchBtn" aria-label="Search products">Search</button>
+    </div>
+    <nav class="header-actions">
+      <button class="text-btn" id="offersBtn">Offers</button>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">STYLE DOCK · BELAUJHA</p>
+        <h1>Your style.<br><em>Your dock.</em></h1>
+        <p class="hero-sub">Men · Women · Kids — fashion that looks premium without the premium price.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-gold">Shop now</a>
+          <a href="#categories" class="btn btn-ghost">Explore categories</a>
+        </div>
+        <div class="trust-row"><span>✓ Fixed prices</span><span>✓ Price tags on every product</span><span>✓ Easy WhatsApp ordering</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-a"><span>NEW</span><strong>DENIM<br>EDIT</strong></div>
+        <div class="hero-card hero-card-b"><span>WOMEN</span><strong>EVERYDAY<br>ELEGANCE</strong></div>
+        <div class="hero-card hero-card-c"><span>KIDS</span><strong>SMALL<br>STYLES</strong></div>
+      </div>
+    </section>
+
+    <section class="category-strip" id="categories">
+      <button data-cat="All" class="cat active">All</button>
+      <button data-cat="Men" class="cat">Men</button>
+      <button data-cat="Women" class="cat">Women</button>
+      <button data-cat="Kids" class="cat">Kids</button>
+      <button data-cat="Jeans" class="cat">Baggy Jeans</button>
+      <button data-cat="Kurtis" class="cat">Kurtis</button>
+      <button data-cat="Tees" class="cat">Oversized Tees</button>
+      <button data-cat="Footwear" class="cat">Footwear</button>
+      <button data-cat="Accessories" class="cat">Watches & More</button>
+    </section>
+
+    <section class="offer-banner" id="offers">
+      <div><p class="eyebrow">THIS WEEK AT STYLE DOCK</p><h2>Build your denim stack.</h2><p>1 @ ₹450 · 2 @ ₹699 · 3 @ ₹999 · 5 @ ₹1499</p></div>
+      <button class="btn btn-dark" data-cat="Jeans">Shop jeans</button>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="section-head"><div><p class="eyebrow">THE COLLECTION</p><h2>Shop your next look</h2></div><div class="controls"><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="new">Newest</option></select><span id="resultCount"></span></div></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty" id="emptyState" hidden><div>⌕</div><h3>No styles found</h3><p>Try another search or category.</p><button class="btn btn-dark" id="clearFilters">Show all products</button></div>
+    </section>
+
+    <section class="why">
+      <div><p class="eyebrow">WHY STYLE DOCK</p><h2>Simple shopping.<br>Better style.</h2></div>
+      <div class="why-grid"><article><b>01</b><h3>Fixed pricing</h3><p>No bargaining. The price on the tag is the price you pay.</p></article><article><b>02</b><h3>Curated fashion</h3><p>Everyday pieces across Men, Women and Kids, selected for real life.</p></article><article><b>03</b><h3>Local + easy</h3><p>Browse online, ask on WhatsApp, or visit us in Belaujha.</p></article></div>
+    </section>
+
+    <section class="visit">
+      <div><p class="eyebrow">COME TO THE DOCK</p><h2>See it. Feel it.<br>Wear it.</h2><p>Old Naveen Medical Store, Belaujha (Ratanpura)</p><p><strong>8881717710</strong></p></div>
+      <div class="map-card"><div class="map-lines"></div><span>STYLE DOCK</span><a class="btn btn-gold" target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/PkFxHFvtWCZ8V1g58">Open in Google Maps</a></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand"><img src="assets/logo-wordmark.png" alt="Style Dock" /></div><div><p>Men · Women · Kids</p><p>Baggy Jeans · Kurtis · Oversized · Western · Casual · Footwear · Watches · Tees & More</p></div><div><p><a href="https://instagram.com/the.styledock" target="_blank" rel="noreferrer">@the.styledock</a></p><p>© <span id="year"></span> Style Dock</p></div></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head"><h2>Your cart</h2><button id="closeCart" class="close">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div class="total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="btn btn-gold full" id="whatsappOrder">Order on WhatsApp</button><button class="btn btn-ghost full" id="clearCart">Clear cart</button><small>WhatsApp ordering is confirmed manually by Style Dock. Product availability may change.</small></div>
+  </aside>
+
+  <div class="modal" id="productModal" hidden><div class="modal-card"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
