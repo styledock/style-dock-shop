@@ -89,9 +89,101 @@
   <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
     <div class="drawer-head"><h2>Your cart</h2><button id="closeCart" class="close">×</button></div>
     <div id="cartItems" class="cart-items"></div>
-    <div class="cart-bottom"><div class="total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="btn btn-gold full" id="whatsappOrder">Order on WhatsApp</button><button class="btn btn-ghost full" id="clearCart">Clear cart</button><small>WhatsApp ordering is confirmed manually by Style Dock. Product availability may change.</small></div>
-  </aside>
+    <div class="checkout-box" id="checkoutBox" hidden>
 
+  <div class="checkout-head">
+    <div>
+      <p class="eyebrow">CHECKOUT</p>
+      <h3>Complete your order</h3>
+      <p>Your details will be sent to STYLE DOCK on WhatsApp.</p>
+    </div>
+    <button type="button" class="checkout-close" id="closeCheckout">×</button>
+  </div>
+
+  <form id="checkoutForm">
+
+    <label>
+      Full name
+      <input
+        type="text"
+        id="customerName"
+        placeholder="Enter your name"
+        required
+      />
+    </label>
+
+    <label>
+      Mobile number
+      <input
+        type="tel"
+        id="customerPhone"
+        placeholder="10-digit mobile number"
+        inputmode="numeric"
+        maxlength="10"
+        required
+      />
+    </label>
+
+    <label>
+      Delivery option
+      <select id="deliveryOption" required>
+        <option value="">Select option</option>
+        <option value="Home Delivery">Home Delivery</option>
+        <option value="Store Pickup">Store Pickup</option>
+      </select>
+    </label>
+
+    <label id="addressField">
+      Full address
+      <textarea
+        id="customerAddress"
+        rows="3"
+        placeholder="House / village / area / landmark"
+      ></textarea>
+    </label>
+
+    <label id="pincodeField">
+      Pincode
+      <input
+        type="text"
+        id="customerPincode"
+        placeholder="6-digit pincode"
+        inputmode="numeric"
+        maxlength="6"
+      />
+    </label>
+
+    <label>
+      Order note <span>(optional)</span>
+      <textarea
+        id="orderNote"
+        rows="2"
+        placeholder="Any special request?"
+      ></textarea>
+    </label>
+
+    <div class="checkout-summary">
+      <span>Order total</span>
+      <strong id="checkoutTotal">₹0</strong>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-gold full"
+    >
+      Continue to WhatsApp →
+    </button>
+
+  </form>
+
+</div>
+
+<button
+  class="btn btn-gold full"
+  id="whatsappOrder"
+>
+  Order on WhatsApp
+</button>
   <div class="modal" id="productModal" hidden><div class="modal-card"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
   <div class="toast" id="toast"></div>
   <script src="app.js"></script>
