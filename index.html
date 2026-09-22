@@ -36,14 +36,18 @@
 
 <body>
 
-  <!-- ANNOUNCEMENT -->
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
 
   <div class="announcement">
     Premium Quality · Latest Trends · Affordable Prices
   </div>
 
 
-  <!-- HEADER -->
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
   <header class="site-header">
 
@@ -100,12 +104,13 @@
       </button>
 
 
-      <!-- SIGN IN / SIGN UP BUTTON -->
+      <!-- SIGN IN / SIGN UP -->
 
       <button
         type="button"
         class="text-btn auth-header-btn"
         id="authBtn"
+        aria-label="Sign in or sign up"
       >
         👤
         <span id="authBtnText">
@@ -114,17 +119,16 @@
       </button>
 
 
-      <!-- CART BUTTON -->
+      <!-- CART -->
 
       <button
         type="button"
         class="text-btn"
         id="cartBtn"
+        aria-label="Open shopping cart"
       >
         Cart
-        <span id="cartCount">
-          0
-        </span>
+        <span id="cartCount">0</span>
       </button>
 
     </nav>
@@ -132,12 +136,16 @@
   </header>
 
 
-  <!-- MAIN -->
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
 
   <main id="top">
 
 
-    <!-- HERO -->
+    <!-- ===================================================
+         HERO
+         =================================================== -->
 
     <section class="hero">
 
@@ -193,9 +201,7 @@
 
         <div class="hero-card hero-card-a">
 
-          <span>
-            NEW
-          </span>
+          <span>NEW</span>
 
           <strong>
             DENIM<br />
@@ -207,9 +213,7 @@
 
         <div class="hero-card hero-card-b">
 
-          <span>
-            WOMEN
-          </span>
+          <span>WOMEN</span>
 
           <strong>
             EVERYDAY<br />
@@ -223,7 +227,9 @@
     </section>
 
 
-    <!-- CATEGORIES -->
+    <!-- ===================================================
+         CATEGORIES
+         =================================================== -->
 
     <section
       class="category-strip"
@@ -233,7 +239,7 @@
 
       <button
         type="button"
-        data-cat="All"
+        data-category="All"
         class="cat active"
       >
         All
@@ -241,7 +247,7 @@
 
       <button
         type="button"
-        data-cat="Men"
+        data-category="Men"
         class="cat"
       >
         Men
@@ -249,7 +255,7 @@
 
       <button
         type="button"
-        data-cat="Women"
+        data-category="Women"
         class="cat"
       >
         Women
@@ -257,7 +263,7 @@
 
       <button
         type="button"
-        data-cat="Jeans"
+        data-category="Jeans"
         class="cat"
       >
         Baggy Jeans
@@ -265,7 +271,7 @@
 
       <button
         type="button"
-        data-cat="Cargos"
+        data-category="Cargos"
         class="cat"
       >
         Cargos
@@ -273,7 +279,7 @@
 
       <button
         type="button"
-        data-cat="Kurtis"
+        data-category="Kurtis"
         class="cat"
       >
         Kurtis
@@ -281,7 +287,7 @@
 
       <button
         type="button"
-        data-cat="Tees"
+        data-category="Tees"
         class="cat"
       >
         Oversized Tees
@@ -289,7 +295,7 @@
 
       <button
         type="button"
-        data-cat="Western"
+        data-category="Western"
         class="cat"
       >
         Western
@@ -297,7 +303,7 @@
 
       <button
         type="button"
-        data-cat="Tops"
+        data-category="Tops"
         class="cat"
       >
         Tops
@@ -305,7 +311,7 @@
 
       <button
         type="button"
-        data-cat="Shirts"
+        data-category="Shirts"
         class="cat"
       >
         Shirts
@@ -314,7 +320,9 @@
     </section>
 
 
-    <!-- OFFER -->
+    <!-- ===================================================
+         OFFER
+         =================================================== -->
 
     <section
       class="offer-banner"
@@ -352,7 +360,9 @@
     </section>
 
 
-    <!-- SHOP -->
+    <!-- ===================================================
+         SHOP
+         =================================================== -->
 
     <section
       class="shop"
@@ -443,7 +453,9 @@
     </section>
 
 
-    <!-- WHY STYLE DOCK -->
+    <!-- ===================================================
+         WHY STYLE DOCK
+         =================================================== -->
 
     <section class="why">
 
@@ -527,7 +539,9 @@
     </section>
 
 
-    <!-- VISIT -->
+    <!-- ===================================================
+         VISIT
+         =================================================== -->
 
     <section class="visit">
 
@@ -586,7 +600,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
   <footer>
 
@@ -610,7 +626,9 @@
   </footer>
 
 
-  <!-- OVERLAY -->
+  <!-- =====================================================
+       OVERLAY
+       ===================================================== -->
 
   <div
     class="overlay"
@@ -619,13 +637,16 @@
   ></div>
 
 
-  <!-- CART DRAWER -->
+  <!-- =====================================================
+       CART DRAWER
+       ===================================================== -->
 
   <aside
     class="cart-drawer"
     id="cartDrawer"
     aria-label="Shopping cart"
     aria-hidden="true"
+    hidden
   >
 
     <div class="drawer-head">
@@ -673,49 +694,57 @@
       <button
         type="button"
         class="btn btn-gold full"
-        id="whatsappOrder"
+        id="checkoutBtn"
       >
-        Order on WhatsApp
+        Checkout
       </button>
 
     </div>
 
+  </aside>
 
-    <!-- CHECKOUT -->
+
+  <!-- =====================================================
+       CHECKOUT MODAL
+       ===================================================== -->
+
+  <div
+    class="modal"
+    id="checkoutModal"
+    hidden
+    aria-hidden="true"
+  >
 
     <div
-      class="checkout-box"
-      id="checkoutBox"
-      hidden
+      class="modal-card checkout-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkoutTitle"
     >
+
+      <button
+        type="button"
+        class="close"
+        id="closeCheckout"
+        aria-label="Close checkout"
+      >
+        ×
+      </button>
+
 
       <div class="checkout-head">
 
-        <div>
+        <p class="eyebrow">
+          CHECKOUT
+        </p>
 
-          <p class="eyebrow">
-            CHECKOUT
-          </p>
+        <h2 id="checkoutTitle">
+          Complete your order
+        </h2>
 
-          <h3>
-            Complete your order
-          </h3>
-
-          <p>
-            Your details will be sent to STYLE DOCK on WhatsApp.
-          </p>
-
-        </div>
-
-
-        <button
-          type="button"
-          class="checkout-close"
-          id="closeCheckout"
-          aria-label="Close checkout"
-        >
-          ×
-        </button>
+        <p>
+          Your details will be sent to STYLE DOCK on WhatsApp.
+        </p>
 
       </div>
 
@@ -723,7 +752,6 @@
       <form id="checkoutForm">
 
         <label>
-
           Full name
 
           <input
@@ -733,12 +761,10 @@
             autocomplete="name"
             required
           />
-
         </label>
 
 
         <label>
-
           Mobile number
 
           <input
@@ -750,12 +776,10 @@
             maxlength="10"
             required
           />
-
         </label>
 
 
         <label>
-
           Delivery option
 
           <select
@@ -776,12 +800,10 @@
             </option>
 
           </select>
-
         </label>
 
 
-        <label id="addressField">
-
+        <label>
           Full address
 
           <textarea
@@ -790,12 +812,10 @@
             placeholder="House / village / area / landmark"
             autocomplete="street-address"
           ></textarea>
-
         </label>
 
 
-        <label id="pincodeField">
-
+        <label>
           Pincode
 
           <input
@@ -806,12 +826,10 @@
             autocomplete="postal-code"
             maxlength="6"
           />
-
         </label>
 
 
         <label>
-
           Order note
           <span>(optional)</span>
 
@@ -820,7 +838,6 @@
             rows="2"
             placeholder="Any special request?"
           ></textarea>
-
         </label>
 
 
@@ -840,6 +857,7 @@
         <button
           type="submit"
           class="btn btn-gold full"
+          id="placeOrderBtn"
         >
           Continue to WhatsApp →
         </button>
@@ -848,10 +866,12 @@
 
     </div>
 
-  </aside>
+  </div>
 
 
-  <!-- PRODUCT MODAL -->
+  <!-- =====================================================
+       PRODUCT MODAL
+       ===================================================== -->
 
   <div
     class="modal"
@@ -883,7 +903,9 @@
   </div>
 
 
-  <!-- STYLE DOCK AUTH MODAL -->
+  <!-- =====================================================
+       STYLE DOCK AUTH MODAL
+       ===================================================== -->
 
   <div
     class="auth-modal"
@@ -923,12 +945,11 @@
       </p>
 
 
-      <!-- PHONE -->
+      <!-- PHONE STEP -->
 
       <div id="authPhoneStep">
 
         <label>
-
           Mobile number
 
           <input
@@ -939,7 +960,6 @@
             autocomplete="tel"
             maxlength="10"
           />
-
         </label>
 
 
@@ -954,7 +974,7 @@
       </div>
 
 
-      <!-- OTP -->
+      <!-- OTP STEP -->
 
       <div
         id="authOtpStep"
@@ -962,11 +982,8 @@
       >
 
         <label>
-
           Your name
-          <span>
-            (for new account)
-          </span>
+          <span>(for new account)</span>
 
           <input
             type="text"
@@ -974,12 +991,10 @@
             placeholder="Enter your name"
             autocomplete="name"
           />
-
         </label>
 
 
         <label>
-
           OTP
 
           <input
@@ -990,7 +1005,6 @@
             autocomplete="one-time-code"
             maxlength="6"
           />
-
         </label>
 
 
@@ -1027,7 +1041,9 @@
   </div>
 
 
-  <!-- TOAST -->
+  <!-- =====================================================
+       TOAST
+       ===================================================== -->
 
   <div
     class="toast"
@@ -1037,12 +1053,16 @@
   ></div>
 
 
-  <!-- APP -->
+  <!-- =====================================================
+       APP.JS
+       ===================================================== -->
 
-  <script src="app.js?v=27"></script>
+  <script src="app.js?v=28"></script>
 
 
-  <!-- FIREBASE AUTH -->
+  <!-- =====================================================
+       FIREBASE AUTH
+       ===================================================== -->
 
   <div id="recaptcha-container"></div>
 
