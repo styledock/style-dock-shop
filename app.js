@@ -325,7 +325,7 @@ function filterProducts() {
    CATEGORY BUTTONS
    ========================================================= */
 
-function setupCategories() function setupShopJeansButton() {
+function setupCategories() {
   const button = document.querySelector('.offer-banner [data-cat="Jeans"]');
 
   if (!button) return;
