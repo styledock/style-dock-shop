@@ -1,242 +1,728 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#10130f" />
-  <meta name="description" content="Style Dock — Men & Women. Premium Quality. Latest Trends. Affordable Prices." />
-  
+
+  <title>STYLE DOCK — Men & Women Fashion | Belaujha</title>
+
+  <meta
+    name="description"
+    content="STYLE DOCK — Men & Women fashion. Premium Quality, Latest Trends, Affordable Prices. Shop jeans, cargos, kurtis, tees, shirts and more."
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#10251f" />
+
   <link rel="icon" href="tsd-logo.png" />
+
+  <meta property="og:title" content="STYLE DOCK — Men & Women Fashion" />
+  <meta
+    property="og:description"
+    content="Premium Quality · Latest Trends · Affordable Prices"
+  />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css?v=27" />
 </head>
+
 <body>
-  <div class="announcement">Premium Quality · Latest Trends · Affordable Prices</div>
+
+  <div class="announcement">
+    Premium Quality · Latest Trends · Affordable Prices
+  </div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Style Dock home">
-  <img src="./tsd-logo.png" alt="STYLE DOCK" />
+
+    <a class="brand" href="#top" aria-label="STYLE DOCK home">
+      <img src="tsd-logo.png" alt="STYLE DOCK" />
     </a>
 
-    
-    <button class="mobile-search" id="mobileSearchBtn" aria-label="Search">⌕</button>
     <div class="search-wrap" id="searchWrap">
-  <input
-    id="searchInput"
-    type="search"
-    placeholder="Search jeans, kurtis, tees, cargos, footwear…"
-    autocomplete="off"
-  />
-  <button id="searchBtn" aria-label="Search products">Search</button>
-</div>
-    <nav class="header-actions">
-      <button class="text-btn" id="offersBtn">Offers</button>
-      <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search jeans, kurtis, tees, cargos..."
+        autocomplete="off"
+        aria-label="Search products"
+      />
+      <button type="button" id="searchBtn">
+        Search
+      </button>
+    </div>
+
+    <nav class="header-actions" aria-label="Store actions">
+
+      <button
+        type="button"
+        class="text-btn"
+        id="offersBtn"
+      >
+        Offers
+      </button>
+
+      <button
+        type="button"
+        class="icon-btn"
+        id="cartBtn"
+        aria-label="Open cart"
+      >
+        🛒
+        <span id="cartCount">0</span>
+      </button>
+
     </nav>
+
   </header>
 
   <main id="top">
+
+    <!-- HERO -->
+
     <section class="hero">
+
       <div class="hero-copy">
-        <p class="eyebrow">STYLE DOCK · BELAUJHA</p>
-        <h1>Your style.<br><em>Your dock.</em></h1>
-        <p class="hero-sub">Men · Women — fashion that looks premium without the premium price.</p>
+
+        <p class="eyebrow">
+          STYLE DOCK · BELAUJHA
+        </p>
+
+        <h1>
+          Your style.<br />
+          <em>Your dock.</em>
+        </h1>
+
+        <p class="hero-sub">
+          Men · Women — fashion that looks premium without the premium price.
+        </p>
+
         <div class="hero-actions">
-          <a href="#shop" class="btn btn-gold">Shop now</a>
-          <a href="#categories" class="btn btn-ghost">Explore categories</a>
+
+          <a href="#shop" class="btn btn-gold">
+            Shop now
+          </a>
+
+          <a href="#categories" class="btn btn-ghost">
+            Explore categories
+          </a>
+
         </div>
-        <div class="trust-row"><span>✓ Easy WhatsApp ordering</span></div>
+
+        <div class="trust-row">
+          <span>✓ Easy WhatsApp ordering</span>
+          <span>✓ Men & Women</span>
+        </div>
+
       </div>
-            <div class="hero-visual">
+
+      <div class="hero-visual">
+
         <div class="hero-card hero-card-a">
           <span>NEW</span>
-          <strong>DENIM<br>EDIT</strong>
+          <strong>
+            DENIM<br />
+            EDIT
+          </strong>
         </div>
 
         <div class="hero-card hero-card-b">
           <span>WOMEN</span>
-          <strong>EVERYDAY<br>ELEGANCE</strong>
+          <strong>
+            EVERYDAY<br />
+            ELEGANCE
+          </strong>
         </div>
+
       </div>
+
     </section>
 
-    <section class="category-strip" id="categories">
-      <button data-cat="All" class="cat active">All</button>
-      <button data-cat="Men" class="cat">Men</button>
-      <button data-cat="Women" class="cat">Women</button>
-      
-      <button data-cat="Jeans" class="cat">Baggy Jeans</button>
-      <button data-cat="Cargos" class="cat">Cargos</button>
-      <button data-cat="Kurtis" class="cat">Kurtis</button>
-      <button data-cat="Tees" class="cat">Oversized Tees</button>
-      <button data-cat="Footwear" class="cat">Footwear</button>
-      <button data-cat="Accessories" class="cat">Watches & More</button>
+
+    <!-- CATEGORIES -->
+
+    <section
+      class="category-strip"
+      id="categories"
+      aria-label="Product categories"
+    >
+
+      <button type="button" data-cat="All" class="cat active">
+        All
+      </button>
+
+      <button type="button" data-cat="Men" class="cat">
+        Men
+      </button>
+
+      <button type="button" data-cat="Women" class="cat">
+        Women
+      </button>
+
+      <button type="button" data-cat="Jeans" class="cat">
+        Baggy Jeans
+      </button>
+
+      <button type="button" data-cat="Cargos" class="cat">
+        Cargos
+      </button>
+
+      <button type="button" data-cat="Kurtis" class="cat">
+        Kurtis
+      </button>
+
+      <button type="button" data-cat="Tees" class="cat">
+        Oversized Tees
+      </button>
+
+      <button type="button" data-cat="Western" class="cat">
+        Western
+      </button>
+
+      <button type="button" data-cat="Tops" class="cat">
+        Tops
+      </button>
+
+      <button type="button" data-cat="Shirts" class="cat">
+        Shirts
+      </button>
+
     </section>
+
+
+    <!-- OFFER -->
 
     <section class="offer-banner" id="offers">
-      <div><p class="eyebrow">THIS WEEK AT STYLE DOCK</p><h2>Build your denim stack.</h2><p>1 @ ₹450 · 2 @ ₹699 · 3 @ ₹999 · 5 @ ₹1499</p></div>
-      <button class="btn btn-dark" data-cat="Jeans">Shop jeans</button>
+
+      <div>
+
+        <p class="eyebrow">
+          THIS WEEK AT STYLE DOCK
+        </p>
+
+        <h2>
+          Build your denim stack.
+        </h2>
+
+        <p>
+          1 @ ₹480 · 2 @ ₹900 · 3 @ ₹1260· 5 @ ₹1499
+        </p>
+
+        <small>
+          Offer pricing is confirmed on WhatsApp before order confirmation.
+        </small>
+
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-dark"
+        id="shopJeansBtn"
+      >
+        Shop jeans
+      </button>
+
     </section>
+
+
+    <!-- SHOP -->
 
     <section class="shop" id="shop">
-      <div class="section-head"><div><p class="eyebrow">THE COLLECTION</p><h2>Shop your next look</h2></div><div class="controls"><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="new">Newest</option></select><span id="resultCount"></span></div></div>
-      <div class="product-grid" id="productGrid"></div>
-      <div class="empty" id="emptyState" hidden><div>⌕</div><h3>No styles found</h3><p>Try another search or category.</p><button class="btn btn-dark" id="clearFilters">Show all products</button></div>
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="eyebrow">
+            THE COLLECTION
+          </p>
+
+          <h2>
+            Shop your next look
+          </h2>
+
+        </div>
+
+        <div class="controls">
+
+          <select
+            id="sortSelect"
+            aria-label="Sort products"
+          >
+            <option value="featured">
+              Featured
+            </option>
+
+            <option value="low">
+              Price: low to high
+            </option>
+
+            <option value="high">
+              Price: high to low
+            </option>
+
+            <option value="new">
+              Newest
+            </option>
+          </select>
+
+          <span id="resultCount"></span>
+
+        </div>
+
+      </div>
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      ></div>
+
+      <div
+        class="empty"
+        id="emptyState"
+        hidden
+      >
+
+        <div class="empty-icon">
+          ⌕
+        </div>
+
+        <h3>
+          No styles found
+        </h3>
+
+        <p>
+          Try another search or category.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="clearFilters"
+        >
+          Show all products
+        </button>
+
+      </div>
+
     </section>
+
+
+    <!-- WHY -->
 
     <section class="why">
-  <div>
-    <p class="eyebrow">WHY STYLE DOCK</p>
-    <h2>Simple shopping.<br>Better style.</h2>
-  </div>
 
-  <div class="why-grid">
-    <article>
-      <b>01</b>
-      <h3>Easy shopping</h3>
-      <p>Simple browsing, easy ordering, and a smooth shopping experience.</p>
-    </article>
-  </div>
+      <div>
+
+        <p class="eyebrow">
+          WHY STYLE DOCK
+        </p>
+
+        <h2>
+          Simple shopping.<br />
+          Better style.
+        </h2>
+
+      </div>
+
+      <div class="why-grid">
+
+        <article>
+          <b>01</b>
+          <h3>Easy shopping</h3>
+          <p>
+            Simple browsing, easy ordering and a smooth shopping experience.
+          </p>
+        </article>
+
+        <article>
+          <b>02</b>
+          <h3>WhatsApp ordering</h3>
+          <p>
+            Select your style, share your details and confirm your order directly.
+          </p>
+        </article>
+
+        <article>
+          <b>03</b>
+          <h3>Men & Women</h3>
+          <p>
+            Everyday fashion across jeans, cargos, kurtis, tees, shirts and more.
+          </p>
+        </article>
+
+        <article>
+          <b>04</b>
+          <h3>Visit the store</h3>
+          <p>
+            See the products in person at STYLE DOCK, Belaujha.
+          </p>
+        </article>
+
+      </div>
+
     </section>
+
+
+    <!-- VISIT -->
 
     <section class="visit">
-      <div><p class="eyebrow">COME TO THE DOCK</p><h2>See it. Feel it.<br>Wear it.</h2><p>Old Naveen Medical Store, Belaujha (Ratanpura)</p><p><strong>8881717710</strong></p></div>
-      <div class="map-card"><div class="map-lines"><img src="tsd-logo.png" alt="STYLE DOCK" /></div><span>STYLE DOCK</span><a class="btn btn-gold" target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/PkFxHFvtWCZ8V1g58">Open in Google Maps</a></div>
+
+      <div>
+
+        <p class="eyebrow">
+          COME TO THE DOCK
+        </p>
+
+        <h2>
+          See it. Feel it.<br />
+          Wear it.
+        </h2>
+
+        <p>
+          Old Naveen Medical Store, Belaujha (Ratanpura)
+        </p>
+
+        <p>
+          <strong>8881717710</strong>
+        </p>
+
+      </div>
+
+      <div class="map-card">
+
+        <div class="map-lines">
+          <img
+            src="tsd-logo.png"
+            alt="STYLE DOCK"
+          />
+        </div>
+
+        <span>
+          STYLE DOCK
+        </span>
+
+        <a
+          class="btn btn-gold"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://maps.app.goo.gl/PkFxHFvtWCZ8V1g58"
+        >
+          Open in Google Maps
+        </a>
+
+      </div>
+
     </section>
+
   </main>
 
-<footer><div class="footer-brand"><img src="tsd-logo.png" alt="STYLE DOCK" /></div><div>Men · Women · Fashion & More</div></footer>
-  <div class="overlay" id="overlay" hidden></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
-    <div class="drawer-head"><h2>Your cart</h2><button id="closeCart" class="close">×</button></div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="checkout-box" id="checkoutBox" hidden>
 
-  <div class="checkout-head">
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-brand">
+      <img
+        src="tsd-logo.png"
+        alt="STYLE DOCK"
+      />
+    </div>
+
     <div>
-      <p class="eyebrow">CHECKOUT</p>
-      <h3>Complete your order</h3>
-      <p>Your details will be sent to STYLE DOCK on WhatsApp.</p>
-    </div>
-    <button type="button" class="checkout-close" id="closeCheckout">×</button>
-  </div>
-
-  <form id="checkoutForm">
-
-    <label>
-      Full name
-      <input
-        type="text"
-        id="customerName"
-        placeholder="Enter your name"
-        required
-      />
-    </label>
-
-    <label>
-      Mobile number
-      <input
-        type="tel"
-        id="customerPhone"
-        placeholder="10-digit mobile number"
-        inputmode="numeric"
-        maxlength="10"
-        required
-      />
-    </label>
-
-    <label>
-      Delivery option
-      <select id="deliveryOption" required>
-        <option value="">Select option</option>
-        <option value="Home Delivery">Home Delivery</option>
-        <option value="Store Pickup">Store Pickup</option>
-      </select>
-    </label>
-
-    <label id="addressField">
-      Full address
-      <textarea
-        id="customerAddress"
-        rows="3"
-        placeholder="House / village / area / landmark"
-      ></textarea>
-    </label>
-
-    <label id="pincodeField">
-      Pincode
-      <input
-        type="text"
-        id="customerPincode"
-        placeholder="6-digit pincode"
-        inputmode="numeric"
-        maxlength="6"
-      />
-    </label>
-
-    <label>
-      Order note <span>(optional)</span>
-      <textarea
-        id="orderNote"
-        rows="2"
-        placeholder="Any special request?"
-      ></textarea>
-    </label>
-
-    <div class="checkout-summary">
-      <span>Order total</span>
-      <strong id="checkoutTotal">₹0</strong>
+      Men · Women · Fashion & More
     </div>
 
-    <button
-      type="submit"
-      class="btn btn-gold full"
-    >
-      Continue to WhatsApp →
-    </button>
+    <div>
+      8881717710
+    </div>
 
-    </form>
+  </footer>
 
-</div>
 
-<button
-  class="btn btn-gold full"
-  id="whatsappOrder"
->
-  Order on WhatsApp
-</button>
+  <!-- OVERLAY -->
 
-</aside>
-
-<!-- PRODUCT DETAILS MODAL -->
-<div
-  class="modal"
-  id="productModal"
-  hidden
-  aria-hidden="true"
->
   <div
-    class="modal-card"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="productModalTitle"
+    class="overlay"
+    id="overlay"
+    hidden
+  ></div>
+
+
+  <!-- CART -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-label="Shopping cart"
+    aria-hidden="true"
   >
-    <button
-      type="button"
-      class="close"
-      id="closeModal"
-      aria-label="Close product details"
+
+    <div class="drawer-head">
+
+      <h2>
+        Your cart
+      </h2>
+
+      <button
+        type="button"
+        id="closeCart"
+        class="close"
+        aria-label="Close cart"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      id="cartItems"
+      class="cart-items"
+    ></div>
+
+
+    <div
+      class="cart-bottom"
+      id="cartBottom"
     >
-      ×
-    </button>
 
-    <div id="modalContent"></div>
+      <div class="total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="cartTotal">
+          ₹0
+        </strong>
+
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-gold full"
+        id="whatsappOrder"
+      >
+        Order on WhatsApp
+      </button>
+
+    </div>
+
+
+    <!-- CHECKOUT -->
+
+    <div
+      class="checkout-box"
+      id="checkoutBox"
+      hidden
+    >
+
+      <div class="checkout-head">
+
+        <div>
+
+          <p class="eyebrow">
+            CHECKOUT
+          </p>
+
+          <h3>
+            Complete your order
+          </h3>
+
+          <p>
+            Your details will be sent to STYLE DOCK on WhatsApp.
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="checkout-close"
+          id="closeCheckout"
+          aria-label="Close checkout"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <form id="checkoutForm">
+
+        <label>
+          Full name
+
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your name"
+            autocomplete="name"
+            required
+          />
+
+        </label>
+
+
+        <label>
+          Mobile number
+
+          <input
+            type="tel"
+            id="customerPhone"
+            placeholder="10-digit mobile number"
+            inputmode="numeric"
+            autocomplete="tel"
+            maxlength="10"
+            required
+          />
+
+        </label>
+
+
+        <label>
+          Delivery option
+
+          <select
+            id="deliveryOption"
+            required
+          >
+
+            <option value="">
+              Select option
+            </option>
+
+            <option value="Home Delivery">
+              Home Delivery
+            </option>
+
+            <option value="Store Pickup">
+              Store Pickup
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <label id="addressField">
+          Full address
+
+          <textarea
+            id="customerAddress"
+            rows="3"
+            placeholder="House / village / area / landmark"
+            autocomplete="street-address"
+          ></textarea>
+
+        </label>
+
+
+        <label id="pincodeField">
+          Pincode
+
+          <input
+            type="text"
+            id="customerPincode"
+            placeholder="6-digit pincode"
+            inputmode="numeric"
+            autocomplete="postal-code"
+            maxlength="6"
+          />
+
+        </label>
+
+
+        <label>
+          Order note
+          <span>(optional)</span>
+
+          <textarea
+            id="orderNote"
+            rows="2"
+            placeholder="Any special request?"
+          ></textarea>
+
+        </label>
+
+
+        <div class="checkout-summary">
+
+          <span>
+            Order total
+          </span>
+
+          <strong id="checkoutTotal">
+            ₹0
+          </strong>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-gold full"
+        >
+          Continue to WhatsApp →
+        </button>
+
+      </form>
+
+    </div>
+
+  </aside>
+
+
+  <!-- PRODUCT MODAL -->
+
+  <div
+    class="modal"
+    id="productModal"
+    hidden
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="productModalTitle"
+    >
+
+      <button
+        type="button"
+        class="close"
+        id="closeModal"
+        aria-label="Close product details"
+      >
+        ×
+      </button>
+
+      <div id="modalContent"></div>
+
+    </div>
+
   </div>
-</div>
 
-<div class="toast" id="toast"></div>
 
-<script src="app.js?v=26"></script>
+  <!-- TOAST -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <script src="app.js?v=27"></script>
+
 </body>
 </html>
