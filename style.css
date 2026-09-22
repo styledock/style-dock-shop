@@ -1420,3 +1420,43 @@ button.add-to-cart:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(23,107,69,.28);
 }
+/* MAIN PAGE PRODUCT BUTTONS - PREMIUM */
+
+.product-card .quick-view-btn{
+  display:block !important;
+  width:calc(100% - 24px) !important;
+  margin:0 12px 12px !important;
+  min-height:42px !important;
+  border:1px solid #c7a45a !important;
+  border-radius:10px !important;
+  background:linear-gradient(135deg,#fff8e8,#f1dfb2) !important;
+  color:#26352f !important;
+  font-weight:800 !important;
+  box-shadow:0 5px 14px rgba(199,164,90,.18) !important;
+}
+
+.product-card .add-cart-btn{
+  display:block !important;
+  width:calc(100% - 30px) !important;
+  margin:12px 15px 15px !important;
+  min-height:46px !important;
+  border:0 !important;
+  border-radius:11px !important;
+  background:linear-gradient(135deg,#1f7650,#0f5138) !important;
+  color:#fff !important;
+  font-weight:800 !important;
+  font-size:14px !important;
+  letter-spacing:.2px !important;
+  box-shadow:0 7px 18px rgba(15,81,56,.25) !important;
+}
+
+.product-card .quick-view-btn:hover{
+  background:linear-gradient(135deg,#f7e8c5,#e4c982) !important;
+  transform:translateY(-2px) !important;
+}
+
+.product-card .add-cart-btn:hover{
+  background:linear-gradient(135deg,#27845a,#0b422e) !important;
+  transform:translateY(-2px) !important;
+  box-shadow:0 10px 22px rgba(15,81,56,.32) !important;
+}
