@@ -22,9 +22,14 @@
     
     <button class="mobile-search" id="mobileSearchBtn" aria-label="Search">⌕</button>
     <div class="search-wrap" id="searchWrap">
-      placeholder="Search jeans, kurtis, tees, cargos, footwear…"
-      <button id="searchBtn" aria-label="Search products">Search</button>
-    </div>
+  <input
+    id="searchInput"
+    type="search"
+    placeholder="Search jeans, kurtis, tees, cargos, footwear…"
+    autocomplete="off"
+  />
+  <button id="searchBtn" aria-label="Search products">Search</button>
+</div>
     <nav class="header-actions">
       <button class="text-btn" id="offersBtn">Offers</button>
       <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
@@ -43,11 +48,17 @@
         </div>
         <div class="trust-row"><span>✓ Easy WhatsApp ordering</span></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card hero-card-a"><span>NEW</span><strong>DENIM<br>EDIT</strong></div>
-        <div class="hero-card hero-card-b"><span>WOMEN</span><strong>EVERYDAY<br>ELEGANCE</strong></div>
-        
-      
+            <div class="hero-visual">
+        <div class="hero-card hero-card-a">
+          <span>NEW</span>
+          <strong>DENIM<br>EDIT</strong>
+        </div>
+
+        <div class="hero-card hero-card-b">
+          <span>WOMEN</span>
+          <strong>EVERYDAY<br>ELEGANCE</strong>
+        </div>
+      </div>
     </section>
 
     <section class="category-strip" id="categories">
