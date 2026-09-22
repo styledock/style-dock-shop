@@ -320,10 +320,6 @@ function filterProducts() {
   renderProducts(products);
 }
 
-
-
-
-    filterProducts();
 /* =========================================================
    CATEGORY BUTTONS
    ========================================================= */
