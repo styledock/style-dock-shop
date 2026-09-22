@@ -325,7 +325,33 @@ function filterProducts() {
    CATEGORY BUTTONS
    ========================================================= */
 
-function setupCategories() {
+function setupCategories() function setupShopJeansButton() {
+  const button = document.querySelector('.offer-banner [data-cat="Jeans"]');
+
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    activeCategory = "Jeans";
+
+    document.querySelectorAll(".cat").forEach((btn) => {
+      btn.classList.toggle(
+        "active",
+        btn.dataset.cat === "Jeans"
+      );
+    });
+
+    filterProducts();
+
+    const shop = $("shop");
+
+    if (shop) {
+      shop.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+}
 
   const buttons = document.querySelectorAll(".cat");
 
