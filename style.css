@@ -1339,3 +1339,22 @@ button:disabled{
     font-size:14px;
   }
 }
+/* MAP TSD LOGO SIZE FIX */
+.map-card img{
+  width:90px !important;
+  height:90px !important;
+  max-width:90px !important;
+  max-height:90px !important;
+  object-fit:contain !important;
+  display:block;
+  margin:auto;
+}
+
+@media(max-width:560px){
+  .map-card img{
+    width:70px !important;
+    height:70px !important;
+    max-width:70px !important;
+    max-height:70px !important;
+  }
+}
