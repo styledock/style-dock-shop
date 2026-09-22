@@ -326,19 +326,78 @@ function filterProducts() {
    ========================================================= */
 
 function setupCategories() {
-  const button = document.querySelector('.offer-banner [data-cat="Jeans"]');
+
+  const buttons = document.querySelectorAll(".cat");
+
+  buttons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+      activeCategory =
+        button.dataset.cat || "All";
+
+      buttons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      filterProducts();
+
+      const shop = $("shop");
+
+      if (shop) {
+        shop.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+
+    });
+
+  });
+
+}
+
+
+/* =========================================================
+   SHOP JEANS BUTTON
+   ========================================================= */
+
+function setupShopJeansButton() {
+
+  const button =
+    document.querySelector('.offer-banner [data-cat="Jeans"]');
 
   if (!button) return;
 
   button.addEventListener("click", () => {
+
     activeCategory = "Jeans";
 
     document.querySelectorAll(".cat").forEach((btn) => {
+
       btn.classList.toggle(
         "active",
         btn.dataset.cat === "Jeans"
       );
+
     });
+
+    filterProducts();
+
+    const shop = $("shop");
+
+    if (shop) {
+      shop.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+  });
+
+});
 
     filterProducts();
 
