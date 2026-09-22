@@ -242,9 +242,16 @@ document.addEventListener("DOMContentLoaded", () => {
     showMessage("");
   }
 
-  authBtn.addEventListener("click", () => {
-    openAuth();
-  });
+  authBtn.addEventListener("click", async () => {
+  const user = window.TSDAuth.getUser();
+
+  if (user) {
+    await window.TSDAuth.logout();
+    return;
+  }
+
+  openAuth();
+});
 
   if (closeAuth) {
     closeAuth.addEventListener("click", closeAuthModal);
