@@ -701,14 +701,141 @@
   </div>
 
 
-  <!-- TOAST -->
+  <!-- STYLE DOCK AUTH MODAL -->
 
+<div
+  class="auth-modal"
+  id="authModal"
+  hidden
+>
   <div
-    class="toast"
-    id="toast"
-    role="status"
-    aria-live="polite"
-  ></div>
+    class="auth-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="authTitle"
+  >
+
+    <button
+      type="button"
+      class="close"
+      id="closeAuth"
+      aria-label="Close sign in"
+    >
+      ×
+    </button>
+
+    <p class="eyebrow">
+      STYLE DOCK ACCOUNT
+    </p>
+
+    <h2 id="authTitle">
+      Sign in / Sign up
+    </h2>
+
+    <p class="auth-subtitle">
+      Use your mobile number to continue.
+    </p>
+
+    <div id="authPhoneStep">
+
+      <label>
+        Mobile number
+
+        <input
+          type="tel"
+          id="authPhone"
+          placeholder="10-digit mobile number"
+          inputmode="numeric"
+          autocomplete="tel"
+          maxlength="10"
+        />
+      </label>
+
+      <button
+        type="button"
+        class="btn btn-gold full"
+        id="sendOtpBtn"
+      >
+        Send OTP
+      </button>
+
+    </div>
+
+    <div id="authOtpStep" hidden>
+
+      <label>
+        Your name
+        <span>(for new account)</span>
+
+        <input
+          type="text"
+          id="authName"
+          placeholder="Enter your name"
+          autocomplete="name"
+        />
+      </label>
+
+      <label>
+        OTP
+
+        <input
+          type="text"
+          id="authOtp"
+          placeholder="6-digit OTP"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          maxlength="6"
+        />
+      </label>
+
+      <button
+        type="button"
+        class="btn btn-gold full"
+        id="verifyOtpBtn"
+      >
+        Verify OTP
+      </button>
+
+      <button
+        type="button"
+        class="auth-resend"
+        id="resendOtpBtn"
+        disabled
+      >
+        Resend OTP
+      </button>
+
+    </div>
+
+    <p
+      class="auth-message"
+      id="authMessage"
+      role="status"
+      aria-live="polite"
+    ></p>
+
+  </div>
+</div>
+
+
+<!-- TOAST -->
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+></div>
+
+
+<script src="app.js?v=27"></script>
+
+<!-- STYLE DOCK Firebase Auth -->
+<div id="recaptcha-container"></div>
+<script type="module" src="firebase-auth.js?v=1"></script>
+
+</body>
+</html>
 
 
   <script src="app.js?v=27"></script>
