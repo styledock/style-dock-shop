@@ -70,17 +70,8 @@ const PRODUCTS = [
     colors: ["White", "Pink", "Black"],
     image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85"
   },
-  {
-    id: 7,
-    name: "Kids Casual Outfit",
-    category: "Kids",
-    type: "Kids Wear",
-    price: 699,
-    oldPrice: 999,
-    sizes: ["4Y", "6Y", "8Y", "10Y", "12Y"],
-    colors: ["Blue", "Yellow", "Black"],
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=85"
-  },
+  
+
   {
     id: 8,
     name: "Premium Casual Shirt",
