@@ -321,6 +321,9 @@ function filterProducts() {
 }
 
 
+
+
+    filterProducts();
 /* =========================================================
    CATEGORY BUTTONS
    ========================================================= */
@@ -357,75 +360,23 @@ function setupCategories() {
 
   });
 
-}
-
-
-/* =========================================================
-   SHOP JEANS BUTTON
-   ========================================================= */
-
-function setupShopJeansButton() {
-
-  const button =
+  const shopJeansButton =
     document.querySelector('.offer-banner [data-cat="Jeans"]');
 
-  if (!button) return;
+  if (shopJeansButton) {
 
-  button.addEventListener("click", () => {
+    shopJeansButton.addEventListener("click", () => {
 
-    activeCategory = "Jeans";
-
-    document.querySelectorAll(".cat").forEach((btn) => {
-
-      btn.classList.toggle(
-        "active",
-        btn.dataset.cat === "Jeans"
-      );
-
-    });
-
-    filterProducts();
-
-    const shop = $("shop");
-
-    if (shop) {
-      shop.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
-
-  });
-
-});
-
-    filterProducts();
-
-    const shop = $("shop");
-
-    if (shop) {
-      shop.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
-  });
-}
-
-  const buttons = document.querySelectorAll(".cat");
-
-  buttons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-      activeCategory =
-        button.dataset.cat || "All";
+      activeCategory = "Jeans";
 
       buttons.forEach((btn) => {
-        btn.classList.remove("active");
-      });
 
-      button.classList.add("active");
+        btn.classList.toggle(
+          "active",
+          btn.dataset.cat === "Jeans"
+        );
+
+      });
 
       filterProducts();
 
@@ -440,13 +391,9 @@ function setupShopJeansButton() {
 
     });
 
-  });
+  }
+
 }
-
-
-/* =========================================================
-   SEARCH
-   ========================================================= */
 
 function setupSearch() {
 
