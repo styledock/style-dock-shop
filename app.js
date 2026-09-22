@@ -597,10 +597,9 @@ function openProduct(productId) {
         </div>
 
         <div class="product-note">
-          ✓ Fixed Price Store<br>
-          ✓ Premium Quality<br>
-          ✓ Easy WhatsApp Ordering
-        </div>
+  ✓ Premium Quality<br>
+  ✓ Easy WhatsApp Ordering
+</div>
 
       </div>
 
